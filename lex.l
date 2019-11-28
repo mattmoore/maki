@@ -22,6 +22,7 @@ whitespace [ \t]
 ":"          { return COLON; }
 "->"         { return RIGHT_ARROW; }
 "{"          { return LEFT_BRACE; }
+"return "    { return RETURN; }
 "}"          { return RIGHT_BRACE; }
 [0-9]+       { return INTEGER_VAL; }
 \n           { ++yylineno; }

@@ -24,6 +24,7 @@
 %token <sval> RIGHT_ARROW
 %token <sval> LEFT_BRACE
 %token <sval> RIGHT_BRACE
+%token <sval> RETURN
 %token <sval> INTEGER_VAL
 
 %start program
@@ -31,7 +32,7 @@
 %%
 
 program: FUNCTION signature returnType LEFT_BRACE
-           body
+           RETURN body
          RIGHT_BRACE
 ;
 

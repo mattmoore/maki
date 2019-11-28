@@ -1,29 +1,32 @@
-# MAKI (Metaprogramming + Arrow Kotlin Implementation)
+# MAKI
 
-Alternative Kotlin compiler built with Flex, Bison and LLVM with a first-class metaprogramming model.
+**Metaprogramming Advanced Kotlin Implementation - _An alternative Kotlin compiler and runtime with advanced metaprogramming capabilities._**
 
 ## Why?
 
-In two words? Arrow & (better) Metaprogramming - wrapped together into a compiler! I really like the Kotlin language. Compared to languages like Ruby, however, Kotlin's metaprogramming capabilities are fairly limiting and frustrating.
+In one word? Metaprogramming! I really like the Kotlin language. Compared to languages like Ruby, however, Kotlin's metaprogramming capabilities are fairly limited.
 
 There are two goals for my implementation:
 
-1. Provide a first-class metaprogramming model. Reflection and modification of the program structure is inherently core to the compiler as well as the runtime. This project is primarily intended as a proof of concept to demonstrate the model I'm thinking of.
-1. Bake in many of the functional features from arrow-kt. While arrow works great on the JVM, it doesn't yet (at the time of writing this) support Kotlin Native. Maki is starting out as a native compiler. At some point, I will attempt JVM support, but since the current major goals are to demonstrate a better metaprogramming model, I'm not worrying about JVM at this time.
+1. A first-class metaprogramming model for use during compilation. There is another project, Arrow-Meta, which does a similar thing. However, the second goal...
+1. ...is a new Kotlin runtime that enables metaprogramming after the program is compiled and *while it is running*.
 
-Assuming my proof of concept works out, as I see it there are a couple of outcomes with the results of this project:
-
-1. Attempt to incorporate my model here into the official Kotlin implementations.
-1. Just continue working on this implementation, attempt to get more support, and perhaps folks who need better Kotlin metaprogramming models might find use for my compiler.
-
-## Why the name?
-
-Because the name encapsulates two areas I think a Kotlin implementation should have, and "maki" is a sushi roll. I really like sushi.
-
-## Design
+## Compiler Design
 
 The compiler is broken down into 3 main components:
 
-1. Lexer: Takes the text of the language we're creating and converts it into tokens. This project uses flex. That may change in the future if necessary, but it's sufficient for now.
-1. Parser: Converts the tokens into an abstract syntax tree (AST). I'm currently using Bison for this. An AST is the in-memory representation of the program structure.
-1. Code Generation: Converts the AST into machine code, making it "runnable" or "executable" on the machine. I'm using LLVM for this project.
+1. Lexer: Converts the Kotlin source code into tokens.
+1. Parser: Converts the tokens into an abstract syntax tree (AST). An AST represents the program structure, giving meaning to the tokens via a grammar.
+1. Code Generation: Converts the AST into machine code, making it "runnable" or "executable" on the machine.
+
+## Runtime Design
+
+The runtime provides an in-memory AST that can be queried and modified while the program is running. Whenever modifications are made to the runtime AST, the corresponding machine code is updated in-memory, without the need for the program to be recompiled or restarted.
+
+Since the AST is accessible at runtime, it becomes possible to take snapshots of the AST at any point in time. This is useful if you want to track the changes to the program while it runs. Effectively, you can save the state of the program at any point in time and reload that same state. There are numerous benefits from this capability limited only by one's imagination.
+
+## Does This Run on The JVM?
+
+No. MAKI is a native compiler. The final build is a native binary. However, it will be capable of using the JVM.
+
+Originally, the thought was to build two versions of the compiler - one for the JVM and one for native. However, I realized that for the purposes of this project, due to limitations in the JVM, I would need to build a separate runtime rather than rely on the JVM. That being said, I realize having access to the JVM would be very useful, so this project will eventually support interoperability with the JVM. The goal is to provide this in such a way that you can reference any JVM library into the project, and the compiler will automatically build the necessary interop code to use that library. This feature will come further in the future, as building the compiler and runtime metaprogramming capabilities is my first goal.
