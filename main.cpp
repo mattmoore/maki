@@ -19,15 +19,7 @@ extern int yylineno;
 using namespace std;
 using namespace llvm;
 
-int main(int argc, char** argv) {
-  int result = yyparse();
-
-  if (result == 0)
-    cout << "The input is valid." << endl;
-  else
-    cout << "The input is invalid." << endl;
-  cout << "Line count: " << yylineno << endl;
-
+void compile() {
   static LLVMContext context;
   Module *module = new Module("test", context);
   IRBuilder<> builder(context);
@@ -67,4 +59,16 @@ int main(int argc, char** argv) {
   file.keep();
 
   module->print(llvm::errs(), nullptr);
+}
+
+int main(int argc, char** argv) {
+  int result = yyparse();
+
+  if (result == 0)
+    cout << "THE INPUT IS VALID." << endl;
+  else
+    cout << "THE INPUT IS INVALID." << endl;
+  cout << "Line count: " << yylineno << endl;
+
+  compile();
 }

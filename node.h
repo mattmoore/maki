@@ -17,7 +17,10 @@ typedef std::vector<VariableDeclaration*> VariableList;
 class Node {
 public:
   virtual ~Node() {}
-  virtual llvm::Value* codeGen(CodeGenContext& context) {}
+  string id;
+  Node *parent;
+  vector<Node> children;
+  // virtual llvm::Value* codeGen(CodeGenContext& context) {}
 };
 
 class Statement : public Node {
@@ -30,11 +33,21 @@ class Integer : public Expression {
 public:
   int value;
   Integer(int value) : value(value) {}
-  virtual llvm::Value* codeGen(CodeGenContext& context) {};
+  // virtual llvm::Value* codeGen(CodeGenContext& context) {};
+};
+
+class Assignment : public Expression {
+public:
+  Assignment() {
+
+  }
 };
 
 class Function : public Expression {
 public:
-  string name;
   string returnType;
+  Function(const char *id, const char *returnType) {
+    this->id = id;
+    this->returnType = returnType;
+  }
 };

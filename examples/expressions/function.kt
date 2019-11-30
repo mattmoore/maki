@@ -1,3 +1,4 @@
 fun function42(): Int {
-  return 5
+  var x = 5
+  return 42
 }
