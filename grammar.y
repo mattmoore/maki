@@ -68,6 +68,20 @@
 
 %%
 
+expr_list:
+    %empty
+  | expr expr_list
+;
+
+expr:
+    value
+  | ID
+  | assignment
+  | function
+  | lambda
+  | arithmetic
+;
+
 value:
     INTEGER
   | FLOAT
@@ -95,6 +109,14 @@ function:
     root.children.push_back(f);
   }
 
+lambda:
+  LEFT_BRACE ID COLON type RIGHT_ARROW expr_list RIGHT_BRACE
+  {
+    Lambda l;
+    l.parent = &root;
+    root.children.push_back(l);
+  }
+
 arithmetic:
     expr PLUS expr
     { $<integer>$ = $<integer>1 + $<integer>3; }
@@ -106,17 +128,5 @@ arithmetic:
     { $<integer>$ = $<integer>1 / $<integer>3; }
   | LEFT_PAREN expr RIGHT_PAREN
     { $<integer>$ = $<integer>2; }
-
-expr_list:
-    %empty
-  | expr expr_list
-;
-
-expr:
-    value
-  | assignment
-  | function
-  | arithmetic
-;
 
 %%

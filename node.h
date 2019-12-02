@@ -46,8 +46,15 @@ public:
 class Function : public Expression {
 public:
   string returnType;
+  Function() {}
   Function(const char *id, const char *returnType) {
     this->id = id;
     this->returnType = returnType;
+  }
+};
+
+class Lambda : public Function {
+public:
+  Lambda() {
   }
 };
