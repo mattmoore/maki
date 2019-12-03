@@ -11,6 +11,8 @@
 #include <llvm/Support/ToolOutputFile.h>
 #include <llvm/Bitcode/BitcodeWriter.h>
 
+#include "node.h"
+
 extern int yyparse();
 extern int yyerror(const char *);
 extern int yylex();

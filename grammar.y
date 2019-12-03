@@ -8,7 +8,7 @@
   extern const char *yyval;
   void yyerror(const char *s) { printf("ERROR: %s\n", s); }
 
-  Node root;
+  AST::Node root;
 %}
 
 %union {
@@ -95,7 +95,7 @@ type:
 assignment:
   VAR ID EQ INTEGER
   {
-    $<integer>$ = $<integer>4;
+    AST::Assignment a($2, AST::value($<integer>4));
   }
 
 function:
@@ -104,7 +104,7 @@ function:
     RETURN expr
   RIGHT_BRACE
   {
-    Function f($2, $<string>6);
+    AST::Function f($2, $<string>6);
     f.parent = &root;
     root.children.push_back(f);
   }
@@ -112,7 +112,7 @@ function:
 lambda:
   LEFT_BRACE ID COLON type RIGHT_ARROW expr_list RIGHT_BRACE
   {
-    Lambda l;
+    AST::Lambda l;
     l.parent = &root;
     root.children.push_back(l);
   }

@@ -1,9 +1,9 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 #include <string.h>
 #include <llvm/IR/Value.h>
-
-using namespace std;
 
 class CodeGenContext;
 class Statement;
@@ -14,47 +14,60 @@ typedef std::vector<Statement*> StatementList;
 typedef std::vector<Expression*> ExpressionList;
 typedef std::vector<VariableDeclaration*> VariableList;
 
-class Node {
-public:
-  virtual ~Node() {}
-  string id;
-  Node *parent;
-  vector<Node> children;
-  // virtual llvm::Value* codeGen(CodeGenContext& context) {}
-};
+using namespace std;
 
-class Statement : public Node {
-};
+namespace AST {
+  class Node {
+  public:
+    virtual ~Node();
+    string id;
+    Node *parent;
+    vector<Node> children;
+    // virtual llvm::Value* codeGen(CodeGenContext &context) {}
+  };
 
-class Expression : public Node {
-};
+  class Statement : public Node {
+  };
 
-class Integer : public Expression {
-public:
-  int value;
-  Integer(int value) : value(value) {}
-  // virtual llvm::Value* codeGen(CodeGenContext& context) {};
-};
+  class Expression : public Node {
+  };
 
-class Assignment : public Expression {
-public:
-  Assignment() {
+  class Value : public Node {
+  };
 
-  }
-};
+  class Integer : public Value {
+  public:
+    int value;
+    Integer(int value);
+    // virtual llvm::Value* codeGen(CodeGenContext &context) {};
+  };
 
-class Function : public Expression {
-public:
-  string returnType;
-  Function() {}
-  Function(const char *id, const char *returnType) {
-    this->id = id;
-    this->returnType = returnType;
-  }
-};
+  class String : public Value {
+  public:
+    const char *value;
+    String(const char *value);
+  };
 
-class Lambda : public Function {
-public:
-  Lambda() {
-  }
-};
+  Value value(int x);
+  Value value(const char *x);
+
+  class Assignment : public Expression {
+  public:
+    const char *left;
+    Value right;
+    Assignment();
+    Assignment(const char *left, const Value right);
+  };
+
+  class Function : public Expression {
+  public:
+    string returnType;
+    Function();
+    Function(const char *id, const char *returnType);
+  };
+
+  class Lambda : public Function {
+  public:
+    Lambda();
+  };
+}

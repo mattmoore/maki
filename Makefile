@@ -12,11 +12,11 @@ compiler: lexer parser
 		$(shell llvm-config --cxxflags --libs) \
 		grammar.tab.c \
 		lex.yy.c \
+		node.cpp \
 		main.cpp
 
 clean:
 	rm -rf \
-		node \
 		lex.yy.c \
 		grammar.tab.* \
 		parser
