@@ -6,5 +6,5 @@ import Text.Parsec.Expr
 import Text.Parsec.Token
 import Text.Parsec.Language
 
-someFunc :: String
-someFunc = "someFunc"
+parse :: String -> String
+parse source = source
