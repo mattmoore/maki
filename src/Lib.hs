@@ -6,5 +6,5 @@ import Text.Parsec.Expr
 import Text.Parsec.Token
 import Text.Parsec.Language
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+someFunc :: String
+someFunc = "someFunc"

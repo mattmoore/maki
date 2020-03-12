@@ -1,9 +1,10 @@
 module LibSpec where
 
 import Test.Hspec
+import Lib
 
 spec :: Spec
 spec = do
   describe "parse" $ do
     it "parses" $ do
-      1 `shouldBe` 1
+      someFunc `shouldBe` "someFunc"
