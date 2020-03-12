@@ -7,4 +7,4 @@ spec :: Spec
 spec = do
   describe "parse" $ do
     it "parses" $ do
-      (parse "x = 5") `shouldBe` "x = 5"
+      (parse "val x = 5") `shouldBe` "val x = 5"
