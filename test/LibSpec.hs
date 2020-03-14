@@ -31,6 +31,6 @@ spec = do
 
   describe "int" $ do
     it "returns an integer" $ do
-      (parse anyDigit "Int parser" "5") `shouldBe` (Right 5)
+      (parse anyDigit "Int parser" "42") `shouldBe` (Right 42)
 
     -- (parse anyChar "val x = 5") `shouldBe` "val x = 5"
