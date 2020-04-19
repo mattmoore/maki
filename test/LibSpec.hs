@@ -18,10 +18,15 @@ boolean = do
     "true"  -> True
     "false" -> False
 
-keyword kw = do { try (string kw); spaces }
+leftParen :: GenParser Char st String
+leftParen = string "("
+
+rightParen :: GenParser Char st String
+rightParen = string ")"
 
 spec :: Spec
 spec = do
+
   describe "int" $ do
     it "returns an integer" $ do
       (parse number "Error" "42") `shouldBe` (Right 42)
@@ -31,3 +36,11 @@ spec = do
       (parse boolean "Error" "true") `shouldBe` (Right True)
     it "returns false" $ do
       (parse boolean "Error" "false") `shouldBe` (Right False)
+
+  describe "leftParen" $ do
+    it "returns (" $ do
+      (parse leftParen "Error" "(") `shouldBe` (Right "(")
+
+  describe "rightParen" $ do
+    it "returns )" $ do
+      (parse rightParen "Error" ")") `shouldBe` (Right ")")
