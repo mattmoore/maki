@@ -4,33 +4,30 @@ import Test.Hspec
 import Lib
 
 import Text.ParserCombinators.Parsec
-import Control.Applicative hiding ((<|>), optional, many)
+import Text.ParserCombinators.Parsec.Expr
 
-alwaysTrue :: Parser Bool
-alwaysTrue = pure True
+number :: GenParser Char st Int
+number = do
+  token <- many1 digit
+  return (read token :: Int)
 
-anyString :: Parser String
-anyString = many anyChar
+boolean :: GenParser Char st Bool
+boolean = do
+  token <- string "true" <|> string "false"
+  return $ case token of
+    "true"  -> True
+    "false" -> False
 
-anyDigit :: (Integral a, Read a) => Parser a
-anyDigit = read <$> many1 digit
--- Same as:
--- int = fmap read $ many1 digit
-
--- main = print $ parse alwaysTrue "I'm just a description string ignore me" "I will be parsed"
+keyword kw = do { try (string kw); spaces }
 
 spec :: Spec
 spec = do
-  describe "alwaysTrue" $ do
-    it "returns true" $ do
-      (parse alwaysTrue "hello" "hello world") `shouldBe` (Right True)
-
-  describe "anyString" $ do
-    it "returns same string passed in" $ do
-      (parse anyString "String parser" "hello world") `shouldBe` (Right "hello world")
-
   describe "int" $ do
     it "returns an integer" $ do
-      (parse anyDigit "Int parser" "42") `shouldBe` (Right 42)
+      (parse number "Error" "42") `shouldBe` (Right 42)
 
-    -- (parse anyChar "val x = 5") `shouldBe` "val x = 5"
+  describe "boolean" $ do
+    it "returns true" $ do
+      (parse boolean "Error" "true") `shouldBe` (Right True)
+    it "returns false" $ do
+      (parse boolean "Error" "false") `shouldBe` (Right False)
