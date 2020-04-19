@@ -24,6 +24,9 @@ leftParen = string "("
 rightParen :: GenParser Char st String
 rightParen = string ")"
 
+valKeyword :: GenParser Char st String
+valKeyword = string "val"
+
 spec :: Spec
 spec = do
 
@@ -44,3 +47,7 @@ spec = do
   describe "rightParen" $ do
     it "returns )" $ do
       (parse rightParen "Error" ")") `shouldBe` (Right ")")
+
+  describe "valKeyword" $ do
+    it "returns val" $ do
+      (parse valKeyword "Error" "val") `shouldBe` (Right "val")
