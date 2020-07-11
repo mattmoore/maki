@@ -1,3 +1,2 @@
-.stack-work/
-maki.cabal
-*~
+target
+.idea
