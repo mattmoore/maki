@@ -14,6 +14,6 @@ lazy val root = (project in file("."))
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
 
 libraryDependencies ++= Seq(
-  "org.antlr" % "antlr4-runtime" % "4.6",
-  "org.antlr" % "stringtemplate" % "3.2"
+  "org.antlr" % "antlr4-runtime" % "4.8",
+  "org.antlr" % "stringtemplate" % "4.0.2"
 )
