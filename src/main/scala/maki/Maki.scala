@@ -9,7 +9,7 @@ object Maki extends App {
     val tokenStream = new CommonTokenStream(lexer)
     val parser = new MakiParser(tokenStream)
     val makiListener = new MakiListenerApp
-    parser.expr.enterRule(makiListener)
+    parser.additiveExpression.enterRule(makiListener)
   }
 
   val expressions = List(
@@ -17,7 +17,7 @@ object Maki extends App {
     "2674 - 4735",
     "47 * 74.1",
     "271 / 281",
-    "12 ^ 3" // unsupported expression
+    "12 ^ 3"
   )
   expressions.foreach(parse)
 }

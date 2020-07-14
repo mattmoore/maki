@@ -59,4 +59,4 @@ Since the AST is accessible at runtime, it becomes possible to take snapshots of
 
 ## Contributing
 
-This project is open-source and contributions are more than welcome! Feel free to open a pull request! You can also reach out to me at mattmoore@carbonhelix.com if you have any questions or want to know how to get started.
+This project is open-source and contributions are more than welcome! Feel free to open a pull request! You can also reach out to me at matt@mattmoore.io if you have any questions or want to know how to get started.
