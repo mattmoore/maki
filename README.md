@@ -12,6 +12,12 @@ There are three main goals for my implementation:
 1. A first-class metaprogramming model for use during compilation. There is another project, Arrow-Meta, which does a similar thing. However, the second goal...
 1. ...is a new Kotlin runtime that enables metaprogramming after the program is compiled and *while it is running*.
 
+## Language Spec
+
+To start, I'm implementing the current [Kotlin language spec](https://github.com/Kotlin/kotlin-spec). I plan to start modifying this spec, however, with some neat features I really like in langauges like Scala and Haskell.
+
+As I continue with designing the language, I'll form my own language spec as well. The idea being that the language spec can be implemented in other compilers as well! Stay tuned for more info on that.
+
 ## Meta Features
 
 ### Compiler
