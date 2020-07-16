@@ -27,7 +27,7 @@ There are three main goals for my implementation:
 
 1. Better FP support than what exists baked-in to Kotlin currently.
 1. A first-class metaprogramming model for use during compilation. There is another project, Arrow-Meta, which does a similar thing. However, the third goal...
-1. ...is a new Kotlin runtime that enables metaprogramming after the program is compiled and *while it is running*.
+1. ...is more advanced metaprogramming capabilities baked into a new runtime library.
 
 ## Language Spec
 
