@@ -4,7 +4,7 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker
 import org.antlr.v4.runtime.{CharStreams, CommonTokenStream}
 
 object Maki extends App {
-  def parse(source: String): Unit = {
+  def parse(source: String): String = {
     val charStream = CharStreams.fromString(source)
     val lexer = new MakiLexer(charStream)
     val tokens = new CommonTokenStream(lexer)
@@ -16,6 +16,7 @@ object Maki extends App {
     val listener = new MakiListenerApp
     val walker = new ParseTreeWalker
     walker.walk(listener, tree)
+    tree.toStringTree(parser)
   }
 
   val source =
