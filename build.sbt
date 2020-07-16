@@ -17,3 +17,5 @@ libraryDependencies ++= Seq(
   "org.antlr" % "antlr4-runtime" % "4.8",
   "org.antlr" % "stringtemplate" % "4.0.2"
 )
+
+mainClass in assembly := Some("maki.Maki")

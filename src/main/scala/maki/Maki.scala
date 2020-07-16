@@ -16,15 +16,5 @@ object Maki extends App {
     walker.walk(listener, tree)
     tree.toStringTree(parser)
   }
-
-  val source =
-    """
-    val x = 5
-    val y = 1
-    val z = x + y
-
-    fun hello() = "Hello Maki!"
-    """
-
-  parse(source)
+  parse(args(0))
 }
