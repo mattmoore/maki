@@ -4,7 +4,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 
 class MakiSpec extends AnyFlatSpec with Matchers {
-  "The parse function" should "parse source code" in {
+  "parse()" should "parse source code" in {
     val source =
       """
       val x = 5

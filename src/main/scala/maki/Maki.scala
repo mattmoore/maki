@@ -11,8 +11,6 @@ object Maki extends App {
     val parser = new MakiParser(tokens)
     val tree = parser.kotlinFile
 
-    println(tree.toStringTree(parser))
-
     val listener = new MakiListenerApp
     val walker = new ParseTreeWalker
     walker.walk(listener, tree)
