@@ -5,11 +5,11 @@ import org.antlr.v4.runtime.tree.TerminalNode
 import scala.util.Try
 
 class MakiListenerApp extends MakiParserBaseListener {
-  override def enterAdditiveExpression(ctx: MakiParser.AdditiveExpressionContext): Unit = {
+  override def enterPropertyDeclaration(ctx: MakiParser.PropertyDeclarationContext): Unit = {
     val exprText = ctx.getText
     println(s"Expression after tokenization = $exprText")
 
-    println(s"context: ${ctx}")
+    println(s"context: ${if (ctx.VAR != null) ctx.VAR else ctx.VAL} ${ctx.variableDeclaration().children.get(0).getChild(0).getText} ${ctx.ASSIGNMENT} ${ctx.expression().getText}")
 //    val operands = ctx.NUMBER().toArray.map(_.asInstanceOf[TerminalNode].getText)
 //    val operand1 = parseDouble(operands.lift(0).getOrElse("0.0")).getOrElse(0.0)
 //    val operand2 = parseDouble(operands.lift(1).getOrElse("0.0")).getOrElse(0.0)
