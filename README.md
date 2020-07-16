@@ -12,6 +12,13 @@ To run the tests:
 sbt test
 ```
 
+To build and run a standalone compiler jar file:
+
+```shell
+sbt clean compile assembly
+java -jar target/scala-2.13/maki-assembly-0.1.0-SNAPSHOT.jar "val x = 5"
+```
+
 ## Why?
 
 Functional programming and metaprogramming. I really like the Kotlin language. Compared to languages like Ruby, however, Kotlin's metaprogramming capabilities are fairly limited.
