@@ -2,6 +2,16 @@
 
 **Meta-Advanced Kotlin Implementation - _An alternative Kotlin compiler and runtime with advanced metaprogramming capabilities._**
 
+## Setup
+
+You'll need SBT 1.3.10.
+
+To run the tests:
+
+```shell
+sbt test
+```
+
 ## Why?
 
 Functional programming and metaprogramming. I really like the Kotlin language. Compared to languages like Ruby, however, Kotlin's metaprogramming capabilities are fairly limited.
