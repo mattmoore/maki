@@ -16,5 +16,5 @@ object Maki extends App {
     walker.walk(listener, tree)
     tree.toStringTree(parser)
   }
-  parse(args(0))
+  println(parse(args(0)))
 }
