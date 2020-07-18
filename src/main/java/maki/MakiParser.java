@@ -291,14 +291,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_kotlinFile; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterKotlinFile(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitKotlinFile(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitKotlinFile(this);
 			else return visitor.visitChildren(this);
@@ -424,14 +416,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_script; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterScript(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitScript(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitScript(this);
 			else return visitor.visitChildren(this);
@@ -534,14 +518,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_shebangLine; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterShebangLine(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitShebangLine(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitShebangLine(this);
 			else return visitor.visitChildren(this);
@@ -611,14 +587,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_fileAnnotation; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFileAnnotation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFileAnnotation(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFileAnnotation(this);
@@ -798,14 +766,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_packageHeader; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPackageHeader(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPackageHeader(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPackageHeader(this);
 			else return visitor.visitChildren(this);
@@ -866,14 +826,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_importList; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterImportList(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitImportList(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitImportList(this);
 			else return visitor.visitChildren(this);
@@ -933,14 +885,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_importHeader; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterImportHeader(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitImportHeader(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitImportHeader(this);
@@ -1109,14 +1053,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_importAlias; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterImportAlias(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitImportAlias(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitImportAlias(this);
 			else return visitor.visitChildren(this);
@@ -1157,14 +1093,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_topLevelObject; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTopLevelObject(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTopLevelObject(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTopLevelObject(this);
@@ -1226,14 +1154,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeAlias; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeAlias(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeAlias(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeAlias(this);
@@ -1366,14 +1286,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_declaration; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitDeclaration(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDeclaration(this);
 			else return visitor.visitChildren(this);
@@ -1472,14 +1384,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterClassDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitClassDeclaration(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassDeclaration(this);
@@ -1752,14 +1656,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_primaryConstructor; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPrimaryConstructor(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPrimaryConstructor(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrimaryConstructor(this);
 			else return visitor.visitChildren(this);
@@ -1836,14 +1732,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classBody; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterClassBody(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitClassBody(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassBody(this);
@@ -1929,14 +1817,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classParameters; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterClassParameters(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitClassParameters(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassParameters(this);
@@ -2107,14 +1987,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_classParameter; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterClassParameter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitClassParameter(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassParameter(this);
 			else return visitor.visitChildren(this);
@@ -2266,14 +2138,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_delegationSpecifiers; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterDelegationSpecifiers(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitDelegationSpecifiers(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDelegationSpecifiers(this);
 			else return visitor.visitChildren(this);
@@ -2369,14 +2233,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_delegationSpecifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterDelegationSpecifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitDelegationSpecifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDelegationSpecifier(this);
 			else return visitor.visitChildren(this);
@@ -2443,14 +2299,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_constructorInvocation; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterConstructorInvocation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitConstructorInvocation(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitConstructorInvocation(this);
 			else return visitor.visitChildren(this);
@@ -2498,14 +2346,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_annotatedDelegationSpecifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAnnotatedDelegationSpecifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAnnotatedDelegationSpecifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotatedDelegationSpecifier(this);
@@ -2585,14 +2425,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_explicitDelegation; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterExplicitDelegation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitExplicitDelegation(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitExplicitDelegation(this);
@@ -2692,14 +2524,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeParameters; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeParameters(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeParameters(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameters(this);
@@ -2856,14 +2680,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_typeParameter; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeParameter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeParameter(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameter(this);
 			else return visitor.visitChildren(this);
@@ -2976,14 +2792,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeConstraints; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeConstraints(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeConstraints(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeConstraints(this);
@@ -3099,14 +2907,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_typeConstraint; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeConstraint(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeConstraint(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeConstraint(this);
 			else return visitor.visitChildren(this);
@@ -3199,14 +2999,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_classMemberDeclarations; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterClassMemberDeclarations(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitClassMemberDeclarations(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassMemberDeclarations(this);
 			else return visitor.visitChildren(this);
@@ -3274,14 +3066,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classMemberDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterClassMemberDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitClassMemberDeclaration(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassMemberDeclaration(this);
@@ -3351,14 +3135,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_anonymousInitializer; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAnonymousInitializer(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAnonymousInitializer(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnonymousInitializer(this);
 			else return visitor.visitChildren(this);
@@ -3427,14 +3203,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_companionObject; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterCompanionObject(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitCompanionObject(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCompanionObject(this);
@@ -3603,14 +3371,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_functionValueParameters; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionValueParameters(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionValueParameters(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionValueParameters(this);
 			else return visitor.visitChildren(this);
@@ -3772,14 +3532,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_functionValueParameter; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionValueParameter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionValueParameter(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionValueParameter(this);
 			else return visitor.visitChildren(this);
@@ -3897,14 +3649,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_functionDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionDeclaration(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionDeclaration(this);
@@ -4145,14 +3889,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_functionBody; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionBody(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionBody(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionBody(this);
 			else return visitor.visitChildren(this);
@@ -4236,14 +3972,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_variableDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterVariableDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitVariableDeclaration(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitVariableDeclaration(this);
@@ -4362,14 +4090,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiVariableDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMultiVariableDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMultiVariableDeclaration(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiVariableDeclaration(this);
@@ -4553,14 +4273,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_propertyDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPropertyDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPropertyDeclaration(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPropertyDeclaration(this);
@@ -4998,14 +4710,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_propertyDelegate; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPropertyDelegate(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPropertyDelegate(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPropertyDelegate(this);
 			else return visitor.visitChildren(this);
@@ -5074,14 +4778,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_getter; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterGetter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitGetter(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitGetter(this);
@@ -5258,14 +4954,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_setter; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSetter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSetter(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSetter(this);
@@ -5478,14 +5166,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parametersWithOptionalType; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParametersWithOptionalType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParametersWithOptionalType(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParametersWithOptionalType(this);
 			else return visitor.visitChildren(this);
@@ -5647,14 +5327,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parameterWithOptionalType; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParameterWithOptionalType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParameterWithOptionalType(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameterWithOptionalType(this);
 			else return visitor.visitChildren(this);
@@ -5753,14 +5425,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parameter; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParameter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParameter(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameter(this);
 			else return visitor.visitChildren(this);
@@ -5844,14 +5508,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_objectDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterObjectDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitObjectDeclaration(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitObjectDeclaration(this);
@@ -5998,14 +5654,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_secondaryConstructor; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSecondaryConstructor(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSecondaryConstructor(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSecondaryConstructor(this);
 			else return visitor.visitChildren(this);
@@ -6142,14 +5790,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_constructorDelegationCall; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterConstructorDelegationCall(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitConstructorDelegationCall(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitConstructorDelegationCall(this);
 			else return visitor.visitChildren(this);
@@ -6243,14 +5883,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_enumClassBody; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterEnumClassBody(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitEnumClassBody(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEnumClassBody(this);
@@ -6385,14 +6017,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_enumEntries; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterEnumEntries(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitEnumEntries(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEnumEntries(this);
 			else return visitor.visitChildren(this);
@@ -6516,14 +6140,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_enumEntry; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterEnumEntry(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitEnumEntry(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEnumEntry(this);
 			else return visitor.visitChildren(this);
@@ -6645,14 +6261,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_type; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitType(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitType(this);
 			else return visitor.visitChildren(this);
@@ -6726,14 +6334,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_typeReference; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeReference(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeReference(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeReference(this);
 			else return visitor.visitChildren(this);
@@ -6795,14 +6395,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_nullableType; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterNullableType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitNullableType(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitNullableType(this);
@@ -6937,14 +6529,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_quest; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterQuest(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitQuest(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitQuest(this);
 			else return visitor.visitChildren(this);
@@ -7000,14 +6584,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_userType; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterUserType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitUserType(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitUserType(this);
@@ -7100,14 +6676,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_simpleUserType; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSimpleUserType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSimpleUserType(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSimpleUserType(this);
 			else return visitor.visitChildren(this);
@@ -7172,14 +6740,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeProjection; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeProjection(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeProjection(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeProjection(this);
@@ -7295,14 +6855,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_typeProjectionModifiers; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeProjectionModifiers(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeProjectionModifiers(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeProjectionModifiers(this);
 			else return visitor.visitChildren(this);
@@ -7364,14 +6916,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeProjectionModifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeProjectionModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeProjectionModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeProjectionModifier(this);
@@ -7452,14 +6996,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_functionType; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionType(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionType(this);
@@ -7588,14 +7124,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_functionTypeParameters; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionTypeParameters(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionTypeParameters(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionTypeParameters(this);
@@ -7773,14 +7301,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parenthesizedType; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParenthesizedType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParenthesizedType(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedType(this);
 			else return visitor.visitChildren(this);
@@ -7859,14 +7379,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_receiverType; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterReceiverType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitReceiverType(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitReceiverType(this);
 			else return visitor.visitChildren(this);
@@ -7941,14 +7453,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parenthesizedUserType; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParenthesizedUserType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParenthesizedUserType(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedUserType(this);
@@ -8073,14 +7577,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_statements; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterStatements(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitStatements(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitStatements(this);
 			else return visitor.visitChildren(this);
@@ -8174,14 +7670,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statement; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitStatement(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitStatement(this);
@@ -8329,14 +7817,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_label; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLabel(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLabel(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLabel(this);
 			else return visitor.visitChildren(this);
@@ -8404,14 +7884,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_controlStructureBody; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterControlStructureBody(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitControlStructureBody(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitControlStructureBody(this);
 			else return visitor.visitChildren(this);
@@ -8466,14 +7938,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_block; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterBlock(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitBlock(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitBlock(this);
@@ -8552,14 +8016,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_loopStatement; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLoopStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLoopStatement(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLoopStatement(this);
@@ -8641,14 +8097,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_forStatement; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterForStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitForStatement(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitForStatement(this);
@@ -8830,14 +8278,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_whileStatement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterWhileStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitWhileStatement(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhileStatement(this);
 			else return visitor.visitChildren(this);
@@ -8974,14 +8414,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_doWhileStatement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterDoWhileStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitDoWhileStatement(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDoWhileStatement(this);
 			else return visitor.visitChildren(this);
@@ -9096,14 +8528,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_assignment; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAssignment(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAssignment(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignment(this);
 			else return visitor.visitChildren(this);
@@ -9197,14 +8621,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_semi; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSemi(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSemi(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSemi(this);
 			else return visitor.visitChildren(this);
@@ -9289,14 +8705,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_semis; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSemis(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSemis(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSemis(this);
 			else return visitor.visitChildren(this);
@@ -9377,14 +8785,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
@@ -9431,14 +8831,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_disjunction; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterDisjunction(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitDisjunction(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDisjunction(this);
@@ -9536,14 +8928,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_conjunction; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterConjunction(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitConjunction(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitConjunction(this);
@@ -9644,14 +9028,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_equality; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterEquality(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitEquality(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEquality(this);
 			else return visitor.visitChildren(this);
@@ -9736,14 +9112,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_comparison; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterComparison(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitComparison(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitComparison(this);
 			else return visitor.visitChildren(this);
@@ -9820,14 +9188,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_genericCallLikeComparison; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterGenericCallLikeComparison(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitGenericCallLikeComparison(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitGenericCallLikeComparison(this);
@@ -9906,14 +9266,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_infixOperation; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterInfixOperation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitInfixOperation(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInfixOperation(this);
@@ -10032,14 +9384,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_elvisExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterElvisExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitElvisExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitElvisExpression(this);
 			else return visitor.visitChildren(this);
@@ -10125,14 +9469,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_elvis; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterElvis(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitElvis(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitElvis(this);
 			else return visitor.visitChildren(this);
@@ -10183,14 +9519,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_infixFunctionCall; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterInfixFunctionCall(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitInfixFunctionCall(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInfixFunctionCall(this);
@@ -10273,14 +9601,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_rangeExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterRangeExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitRangeExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitRangeExpression(this);
@@ -10366,14 +9686,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_additiveExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAdditiveExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAdditiveExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAdditiveExpression(this);
 			else return visitor.visitChildren(this);
@@ -10457,14 +9769,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiplicativeExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMultiplicativeExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMultiplicativeExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiplicativeExpression(this);
@@ -10552,14 +9856,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_asExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAsExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAsExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAsExpression(this);
@@ -10651,14 +9947,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_prefixUnaryExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPrefixUnaryExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPrefixUnaryExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrefixUnaryExpression(this);
 			else return visitor.visitChildren(this);
@@ -10721,14 +10009,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_unaryPrefix; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterUnaryPrefix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitUnaryPrefix(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitUnaryPrefix(this);
@@ -10863,14 +10143,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_postfixUnaryExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPostfixUnaryExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPostfixUnaryExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPostfixUnaryExpression(this);
 			else return visitor.visitChildren(this);
@@ -10953,14 +10225,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_postfixUnarySuffix; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPostfixUnarySuffix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPostfixUnarySuffix(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPostfixUnarySuffix(this);
 			else return visitor.visitChildren(this);
@@ -11040,14 +10304,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_directlyAssignableExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterDirectlyAssignableExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitDirectlyAssignableExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDirectlyAssignableExpression(this);
 			else return visitor.visitChildren(this);
@@ -11111,14 +10367,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parenthesizedDirectlyAssignableExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParenthesizedDirectlyAssignableExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParenthesizedDirectlyAssignableExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedDirectlyAssignableExpression(this);
@@ -11195,14 +10443,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_assignableExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAssignableExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAssignableExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignableExpression(this);
 			else return visitor.visitChildren(this);
@@ -11257,14 +10497,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parenthesizedAssignableExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParenthesizedAssignableExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParenthesizedAssignableExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedAssignableExpression(this);
@@ -11344,14 +10576,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_assignableSuffix; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAssignableSuffix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAssignableSuffix(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignableSuffix(this);
 			else return visitor.visitChildren(this);
@@ -11425,14 +10649,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_indexingSuffix; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterIndexingSuffix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitIndexingSuffix(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIndexingSuffix(this);
@@ -11589,14 +10805,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_navigationSuffix; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterNavigationSuffix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitNavigationSuffix(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitNavigationSuffix(this);
 			else return visitor.visitChildren(this);
@@ -11738,14 +10946,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_callSuffix; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterCallSuffix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitCallSuffix(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCallSuffix(this);
 			else return visitor.visitChildren(this);
@@ -11839,14 +11039,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_annotatedLambda; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAnnotatedLambda(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAnnotatedLambda(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotatedLambda(this);
 			else return visitor.visitChildren(this);
@@ -11934,14 +11126,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeArguments; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeArguments(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeArguments(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeArguments(this);
@@ -12095,14 +11279,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_valueArguments; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterValueArguments(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitValueArguments(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitValueArguments(this);
@@ -12289,14 +11465,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_valueArgument; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterValueArgument(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitValueArgument(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitValueArgument(this);
 			else return visitor.visitChildren(this);
@@ -12468,14 +11636,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_primaryExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPrimaryExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPrimaryExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrimaryExpression(this);
 			else return visitor.visitChildren(this);
@@ -12615,14 +11775,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parenthesizedExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParenthesizedExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParenthesizedExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedExpression(this);
 			else return visitor.visitChildren(this);
@@ -12707,14 +11859,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_collectionLiteral; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterCollectionLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitCollectionLiteral(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCollectionLiteral(this);
@@ -12895,14 +12039,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_literalConstant; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLiteralConstant(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLiteralConstant(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLiteralConstant(this);
 			else return visitor.visitChildren(this);
@@ -12950,14 +12086,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_stringLiteral; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterStringLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitStringLiteral(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitStringLiteral(this);
@@ -13020,14 +12148,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_lineStringLiteral; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLineStringLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLineStringLiteral(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLineStringLiteral(this);
@@ -13113,14 +12233,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_multiLineStringLiteral; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMultiLineStringLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMultiLineStringLiteral(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiLineStringLiteral(this);
 			else return visitor.visitChildren(this);
@@ -13192,14 +12304,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_lineStringContent; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLineStringContent(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLineStringContent(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLineStringContent(this);
 			else return visitor.visitChildren(this);
@@ -13247,14 +12351,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_lineStringExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLineStringExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLineStringExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLineStringExpression(this);
 			else return visitor.visitChildren(this);
@@ -13294,14 +12390,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiLineStringContent; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMultiLineStringContent(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMultiLineStringContent(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiLineStringContent(this);
@@ -13353,14 +12441,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiLineStringExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMultiLineStringExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMultiLineStringExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiLineStringExpression(this);
@@ -13443,14 +12523,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_lambdaLiteral; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLambdaLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLambdaLiteral(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLambdaLiteral(this);
@@ -13624,14 +12696,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_lambdaParameters; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLambdaParameters(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLambdaParameters(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLambdaParameters(this);
 			else return visitor.visitChildren(this);
@@ -13752,14 +12816,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_lambdaParameter; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterLambdaParameter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitLambdaParameter(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLambdaParameter(this);
@@ -13920,14 +12976,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_anonymousFunction; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAnonymousFunction(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAnonymousFunction(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnonymousFunction(this);
@@ -14113,14 +13161,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_functionLiteral; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionLiteral(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionLiteral(this);
 			else return visitor.visitChildren(this);
@@ -14180,14 +13220,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_objectLiteral; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterObjectLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitObjectLiteral(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitObjectLiteral(this);
@@ -14305,14 +13337,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_thisExpression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterThisExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitThisExpression(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitThisExpression(this);
 			else return visitor.visitChildren(this);
@@ -14369,14 +13393,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_superExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSuperExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSuperExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSuperExpression(this);
@@ -14501,14 +13517,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_ifExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterIfExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitIfExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIfExpression(this);
@@ -15002,14 +14010,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_whenSubject; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterWhenSubject(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitWhenSubject(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenSubject(this);
 			else return visitor.visitChildren(this);
@@ -15152,14 +14152,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_whenExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterWhenExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitWhenExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenExpression(this);
@@ -15323,14 +14315,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_whenEntry; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterWhenEntry(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitWhenEntry(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenEntry(this);
@@ -15641,14 +14625,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_whenCondition; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterWhenCondition(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitWhenCondition(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenCondition(this);
 			else return visitor.visitChildren(this);
@@ -15802,14 +14778,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_rangeTest; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterRangeTest(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitRangeTest(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitRangeTest(this);
 			else return visitor.visitChildren(this);
@@ -15871,14 +14839,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeTest; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeTest(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeTest(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeTest(this);
@@ -15946,14 +14906,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_tryExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTryExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTryExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTryExpression(this);
@@ -16116,14 +15068,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_catchBlock; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterCatchBlock(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitCatchBlock(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCatchBlock(this);
 			else return visitor.visitChildren(this);
@@ -16244,14 +15188,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_finallyBlock; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFinallyBlock(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFinallyBlock(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFinallyBlock(this);
 			else return visitor.visitChildren(this);
@@ -16315,14 +15251,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_jumpExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterJumpExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitJumpExpression(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitJumpExpression(this);
@@ -16450,14 +15378,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_callableReference; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterCallableReference(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitCallableReference(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCallableReference(this);
@@ -16602,14 +15522,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_assignmentAndOperator; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAssignmentAndOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAssignmentAndOperator(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignmentAndOperator(this);
 			else return visitor.visitChildren(this);
@@ -16655,14 +15567,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_equalityOperator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterEqualityOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitEqualityOperator(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEqualityOperator(this);
@@ -16710,14 +15614,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_comparisonOperator; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterComparisonOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitComparisonOperator(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitComparisonOperator(this);
 			else return visitor.visitChildren(this);
@@ -16761,14 +15657,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_inOperator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterInOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitInOperator(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInOperator(this);
@@ -16814,14 +15702,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_isOperator; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterIsOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitIsOperator(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIsOperator(this);
 			else return visitor.visitChildren(this);
@@ -16865,14 +15745,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_additiveOperator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAdditiveOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAdditiveOperator(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAdditiveOperator(this);
@@ -16919,14 +15791,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_multiplicativeOperator; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMultiplicativeOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMultiplicativeOperator(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiplicativeOperator(this);
 			else return visitor.visitChildren(this);
@@ -16970,14 +15834,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_asOperator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAsOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAsOperator(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAsOperator(this);
@@ -17027,14 +15883,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_prefixUnaryOperator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPrefixUnaryOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPrefixUnaryOperator(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrefixUnaryOperator(this);
@@ -17112,14 +15960,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_postfixUnaryOperator; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPostfixUnaryOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPostfixUnaryOperator(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPostfixUnaryOperator(this);
 			else return visitor.visitChildren(this);
@@ -17179,14 +16019,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_excl; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterExcl(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitExcl(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitExcl(this);
 			else return visitor.visitChildren(this);
@@ -17233,14 +16065,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_memberAccessOperator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMemberAccessOperator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMemberAccessOperator(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMemberAccessOperator(this);
@@ -17299,14 +16123,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_safeNav; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSafeNav(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSafeNav(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSafeNav(this);
 			else return visitor.visitChildren(this);
@@ -17353,14 +16169,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_modifiers; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterModifiers(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitModifiers(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitModifiers(this);
@@ -17466,14 +16274,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parameterModifiers; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParameterModifiers(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParameterModifiers(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameterModifiers(this);
 			else return visitor.visitChildren(this);
@@ -17570,14 +16370,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_modifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitModifier(this);
@@ -17705,14 +16497,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_typeModifiers; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeModifiers(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeModifiers(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeModifiers(this);
 			else return visitor.visitChildren(this);
@@ -17772,14 +16556,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeModifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeModifier(this);
@@ -17850,14 +16626,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_classModifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterClassModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitClassModifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassModifier(this);
 			else return visitor.visitChildren(this);
@@ -17901,14 +16669,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_memberModifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMemberModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMemberModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMemberModifier(this);
@@ -17956,14 +16716,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_visibilityModifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterVisibilityModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitVisibilityModifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitVisibilityModifier(this);
 			else return visitor.visitChildren(this);
@@ -18007,14 +16759,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_varianceModifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterVarianceModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitVarianceModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitVarianceModifier(this);
@@ -18063,14 +16807,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeParameterModifiers; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeParameterModifiers(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeParameterModifiers(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameterModifiers(this);
@@ -18136,14 +16872,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeParameterModifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterTypeParameterModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitTypeParameterModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameterModifier(this);
@@ -18241,14 +16969,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_functionModifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterFunctionModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitFunctionModifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionModifier(this);
 			else return visitor.visitChildren(this);
@@ -18292,14 +17012,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_propertyModifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPropertyModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPropertyModifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPropertyModifier(this);
 			else return visitor.visitChildren(this);
@@ -18335,14 +17047,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_inheritanceModifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterInheritanceModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitInheritanceModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInheritanceModifier(this);
@@ -18389,14 +17093,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parameterModifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterParameterModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitParameterModifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameterModifier(this);
 			else return visitor.visitChildren(this);
@@ -18440,14 +17136,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_reificationModifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterReificationModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitReificationModifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitReificationModifier(this);
 			else return visitor.visitChildren(this);
@@ -18482,14 +17170,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_platformModifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterPlatformModifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitPlatformModifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPlatformModifier(this);
@@ -18542,14 +17222,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_annotation; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAnnotation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAnnotation(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotation(this);
@@ -18626,14 +17298,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_singleAnnotation; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSingleAnnotation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSingleAnnotation(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSingleAnnotation(this);
@@ -18724,14 +17388,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiAnnotation; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterMultiAnnotation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitMultiAnnotation(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiAnnotation(this);
@@ -18853,14 +17509,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_annotationUseSiteTarget; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterAnnotationUseSiteTarget(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitAnnotationUseSiteTarget(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotationUseSiteTarget(this);
 			else return visitor.visitChildren(this);
@@ -18934,14 +17582,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_unescapedAnnotation; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterUnescapedAnnotation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitUnescapedAnnotation(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitUnescapedAnnotation(this);
@@ -19036,14 +17676,6 @@ public class MakiParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_simpleIdentifier; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterSimpleIdentifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitSimpleIdentifier(this);
-		}
-		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSimpleIdentifier(this);
 			else return visitor.visitChildren(this);
@@ -19099,14 +17731,6 @@ public class MakiParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_identifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).enterIdentifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MakiParserListener ) ((MakiParserListener)listener).exitIdentifier(this);
-		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIdentifier(this);
