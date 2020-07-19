@@ -1,19 +1,29 @@
 package maki
 
-import org.antlr.v4.runtime.tree.ParseTreeWalker
+import maki.ast.KtFile
 import org.antlr.v4.runtime.{CharStreams, CommonTokenStream}
 
 object Maki extends App {
-  def parse(source: String): String = {
+  def parser(source: String): MakiParser = {
     val charStream = CharStreams.fromString(source)
     val lexer = new MakiLexer(charStream)
     val tokens = new CommonTokenStream(lexer)
-    val parser = new MakiParser(tokens)
-    val tree = parser.kotlinFile
-
-    val visitor = new MakiVisitor
-    visitor.visit(tree)
-    tree.toStringTree(parser)
+    new MakiParser(tokens)
   }
-  println(parse(args(0)))
+
+  def visitor(source: String): MakiVisitor = {
+    val visitor = new MakiVisitor
+    visitor.visit(parser(source).kotlinFile)
+    visitor
+  }
+
+  def parse(source: String): KtFile = {
+    visitor(source).ast
+  }
+
+  def parseLisp(source: String): String = {
+    parser(source).kotlinFile.toStringTree(parser(source))
+  }
+
+  println(parseLisp(args(0)))
 }
