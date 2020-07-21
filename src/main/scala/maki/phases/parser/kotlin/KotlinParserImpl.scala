@@ -5,18 +5,17 @@ import maki.phases.parser.kotlin.ast.KtFile
 import org.antlr.v4.runtime.{CharStreams, CodePointCharStream, CommonTokenStream}
 
 object KotlinParserImpl {
-  val charStream = (source: String) => CharStreams.fromString(source)
-  val lexer = (stream: CodePointCharStream) => new KotlinLexer(stream)
-  val tokenStream = (lexer: KotlinLexer) => new CommonTokenStream(lexer)
-  val parser = (tokenStream: CommonTokenStream) => new KotlinParser(tokenStream)
+  private val charStream = (source: String) => CharStreams.fromString(source)
+  private val lexer = (stream: CodePointCharStream) => new KotlinLexer(stream)
+  private val tokenStream = (lexer: KotlinLexer) => new CommonTokenStream(lexer)
+  private val parser = (tokenStream: CommonTokenStream) => new KotlinParser(tokenStream)
+  private val visitor = (source: String) => KotlinVisitor(KotlinParserImpl(source).kotlinFile)
 
-  def createParser = parser compose tokenStream compose lexer compose charStream
+  private def initParser = parser compose tokenStream compose lexer compose charStream
 
-  def apply(source: String): KotlinParser = createParser(source)
+  def apply(source: String): KotlinParser = initParser(source)
 
   def parse(source: String): KtFile = visitor(source).ast
 
   def parseLisp(source: String): String = KotlinParserImpl(source).kotlinFile.toStringTree(KotlinParserImpl(source))
-
-  def visitor(source: String): KotlinVisitor = KotlinVisitor(KotlinParserImpl(source).kotlinFile)
 }
