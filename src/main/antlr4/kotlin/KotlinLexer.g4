@@ -1,4 +1,4 @@
-lexer grammar MakiLexer;
+lexer grammar KotlinLexer;
 
 import UnicodeClasses;
 

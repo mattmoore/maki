@@ -1,6 +1,6 @@
-parser grammar MakiParser;
+parser grammar KotlinParser;
 
-options { tokenVocab = MakiLexer; }
+options { tokenVocab = KotlinLexer; }
 
 // SECTION: general
 

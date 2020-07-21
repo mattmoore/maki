@@ -1,4 +1,4 @@
-package maki.ast
+package maki.phases.parser.kotlin.ast
 
 class KtProperty(
                   val name: String,

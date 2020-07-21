@@ -1,5 +1,5 @@
-// Generated from /Users/mattmoore/source/maki/src/main/antlr4/MakiParser.g4 by ANTLR 4.8
-package maki;
+// Generated from /Users/mattmoore/source/maki/src/main/antlr4/kotlin/KotlinParser.g4 by ANTLR 4.8
+package maki.kotlin;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class MakiParser extends Parser {
+public class KotlinParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -243,7 +243,7 @@ public class MakiParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "MakiParser.g4"; }
+	public String getGrammarFileName() { return "KotlinParser.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -254,7 +254,7 @@ public class MakiParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public MakiParser(TokenStream input) {
+	public KotlinParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -266,13 +266,13 @@ public class MakiParser extends Parser {
 		public ImportListContext importList() {
 			return getRuleContext(ImportListContext.class,0);
 		}
-		public TerminalNode EOF() { return getToken(MakiParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(KotlinParser.EOF, 0); }
 		public ShebangLineContext shebangLine() {
 			return getRuleContext(ShebangLineContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<FileAnnotationContext> fileAnnotation() {
 			return getRuleContexts(FileAnnotationContext.class);
@@ -292,7 +292,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_kotlinFile; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitKotlinFile(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitKotlinFile(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -385,13 +385,13 @@ public class MakiParser extends Parser {
 		public ImportListContext importList() {
 			return getRuleContext(ImportListContext.class,0);
 		}
-		public TerminalNode EOF() { return getToken(MakiParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(KotlinParser.EOF, 0); }
 		public ShebangLineContext shebangLine() {
 			return getRuleContext(ShebangLineContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<FileAnnotationContext> fileAnnotation() {
 			return getRuleContexts(FileAnnotationContext.class);
@@ -417,7 +417,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_script; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitScript(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitScript(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -508,10 +508,10 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ShebangLineContext extends ParserRuleContext {
-		public TerminalNode ShebangLine() { return getToken(MakiParser.ShebangLine, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode ShebangLine() { return getToken(KotlinParser.ShebangLine, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ShebangLineContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -519,7 +519,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_shebangLine; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitShebangLine(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitShebangLine(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -567,21 +567,21 @@ public class MakiParser extends Parser {
 	}
 
 	public static class FileAnnotationContext extends ParserRuleContext {
-		public TerminalNode FILE() { return getToken(MakiParser.FILE, 0); }
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
-		public TerminalNode AT_NO_WS() { return getToken(MakiParser.AT_NO_WS, 0); }
-		public TerminalNode AT_PRE_WS() { return getToken(MakiParser.AT_PRE_WS, 0); }
-		public TerminalNode LSQUARE() { return getToken(MakiParser.LSQUARE, 0); }
-		public TerminalNode RSQUARE() { return getToken(MakiParser.RSQUARE, 0); }
+		public TerminalNode FILE() { return getToken(KotlinParser.FILE, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
+		public TerminalNode AT_NO_WS() { return getToken(KotlinParser.AT_NO_WS, 0); }
+		public TerminalNode AT_PRE_WS() { return getToken(KotlinParser.AT_PRE_WS, 0); }
+		public TerminalNode LSQUARE() { return getToken(KotlinParser.LSQUARE, 0); }
+		public TerminalNode RSQUARE() { return getToken(KotlinParser.RSQUARE, 0); }
 		public List<UnescapedAnnotationContext> unescapedAnnotation() {
 			return getRuleContexts(UnescapedAnnotationContext.class);
 		}
 		public UnescapedAnnotationContext unescapedAnnotation(int i) {
 			return getRuleContext(UnescapedAnnotationContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public FileAnnotationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -589,7 +589,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_fileAnnotation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFileAnnotation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFileAnnotation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -754,7 +754,7 @@ public class MakiParser extends Parser {
 	}
 
 	public static class PackageHeaderContext extends ParserRuleContext {
-		public TerminalNode PACKAGE() { return getToken(MakiParser.PACKAGE, 0); }
+		public TerminalNode PACKAGE() { return getToken(KotlinParser.PACKAGE, 0); }
 		public IdentifierContext identifier() {
 			return getRuleContext(IdentifierContext.class,0);
 		}
@@ -767,7 +767,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_packageHeader; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPackageHeader(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPackageHeader(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -827,7 +827,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_importList; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitImportList(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitImportList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -869,12 +869,12 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ImportHeaderContext extends ParserRuleContext {
-		public TerminalNode IMPORT() { return getToken(MakiParser.IMPORT, 0); }
+		public TerminalNode IMPORT() { return getToken(KotlinParser.IMPORT, 0); }
 		public IdentifierContext identifier() {
 			return getRuleContext(IdentifierContext.class,0);
 		}
-		public TerminalNode DOT() { return getToken(MakiParser.DOT, 0); }
-		public TerminalNode MULT() { return getToken(MakiParser.MULT, 0); }
+		public TerminalNode DOT() { return getToken(KotlinParser.DOT, 0); }
+		public TerminalNode MULT() { return getToken(KotlinParser.MULT, 0); }
 		public ImportAliasContext importAlias() {
 			return getRuleContext(ImportAliasContext.class,0);
 		}
@@ -887,7 +887,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_importHeader; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitImportHeader(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitImportHeader(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1044,7 +1044,7 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ImportAliasContext extends ParserRuleContext {
-		public TerminalNode AS() { return getToken(MakiParser.AS, 0); }
+		public TerminalNode AS() { return getToken(KotlinParser.AS, 0); }
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
@@ -1054,7 +1054,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_importAlias; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitImportAlias(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitImportAlias(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1095,7 +1095,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_topLevelObject; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTopLevelObject(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTopLevelObject(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1132,20 +1132,20 @@ public class MakiParser extends Parser {
 	}
 
 	public static class TypeAliasContext extends ParserRuleContext {
-		public TerminalNode TYPE_ALIAS() { return getToken(MakiParser.TYPE_ALIAS, 0); }
+		public TerminalNode TYPE_ALIAS() { return getToken(KotlinParser.TYPE_ALIAS, 0); }
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public TypeParametersContext typeParameters() {
 			return getRuleContext(TypeParametersContext.class,0);
@@ -1156,7 +1156,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeAlias; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeAlias(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeAlias(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1287,7 +1287,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1351,14 +1351,14 @@ public class MakiParser extends Parser {
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode CLASS() { return getToken(MakiParser.CLASS, 0); }
-		public TerminalNode INTERFACE() { return getToken(MakiParser.INTERFACE, 0); }
+		public TerminalNode CLASS() { return getToken(KotlinParser.CLASS, 0); }
+		public TerminalNode INTERFACE() { return getToken(KotlinParser.INTERFACE, 0); }
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public TypeParametersContext typeParameters() {
 			return getRuleContext(TypeParametersContext.class,0);
@@ -1366,7 +1366,7 @@ public class MakiParser extends Parser {
 		public PrimaryConstructorContext primaryConstructor() {
 			return getRuleContext(PrimaryConstructorContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public DelegationSpecifiersContext delegationSpecifiers() {
 			return getRuleContext(DelegationSpecifiersContext.class,0);
 		}
@@ -1379,14 +1379,14 @@ public class MakiParser extends Parser {
 		public EnumClassBodyContext enumClassBody() {
 			return getRuleContext(EnumClassBodyContext.class,0);
 		}
-		public TerminalNode FUN() { return getToken(MakiParser.FUN, 0); }
+		public TerminalNode FUN() { return getToken(KotlinParser.FUN, 0); }
 		public ClassDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classDeclaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitClassDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1643,13 +1643,13 @@ public class MakiParser extends Parser {
 		public ClassParametersContext classParameters() {
 			return getRuleContext(ClassParametersContext.class,0);
 		}
-		public TerminalNode CONSTRUCTOR() { return getToken(MakiParser.CONSTRUCTOR, 0); }
+		public TerminalNode CONSTRUCTOR() { return getToken(KotlinParser.CONSTRUCTOR, 0); }
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public PrimaryConstructorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1657,7 +1657,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryConstructor; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrimaryConstructor(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPrimaryConstructor(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1719,14 +1719,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ClassBodyContext extends ParserRuleContext {
-		public TerminalNode LCURL() { return getToken(MakiParser.LCURL, 0); }
+		public TerminalNode LCURL() { return getToken(KotlinParser.LCURL, 0); }
 		public ClassMemberDeclarationsContext classMemberDeclarations() {
 			return getRuleContext(ClassMemberDeclarationsContext.class,0);
 		}
-		public TerminalNode RCURL() { return getToken(MakiParser.RCURL, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RCURL() { return getToken(KotlinParser.RCURL, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ClassBodyContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1734,7 +1734,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classBody; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassBody(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitClassBody(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1797,11 +1797,11 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ClassParametersContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<ClassParameterContext> classParameter() {
 			return getRuleContexts(ClassParameterContext.class);
@@ -1809,9 +1809,9 @@ public class MakiParser extends Parser {
 		public ClassParameterContext classParameter(int i) {
 			return getRuleContext(ClassParameterContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public ClassParametersContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1819,7 +1819,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classParameters; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassParameters(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitClassParameters(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1965,30 +1965,30 @@ public class MakiParser extends Parser {
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode VAL() { return getToken(MakiParser.VAL, 0); }
-		public TerminalNode VAR() { return getToken(MakiParser.VAR, 0); }
+		public TerminalNode VAL() { return getToken(KotlinParser.VAL, 0); }
+		public TerminalNode VAR() { return getToken(KotlinParser.VAR, 0); }
 		public ClassParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classParameter; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassParameter(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitClassParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2125,13 +2125,13 @@ public class MakiParser extends Parser {
 		public AnnotatedDelegationSpecifierContext annotatedDelegationSpecifier(int i) {
 			return getRuleContext(AnnotatedDelegationSpecifierContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public DelegationSpecifiersContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2139,7 +2139,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_delegationSpecifiers; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDelegationSpecifiers(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitDelegationSpecifiers(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2234,7 +2234,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_delegationSpecifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDelegationSpecifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitDelegationSpecifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2300,7 +2300,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constructorInvocation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitConstructorInvocation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitConstructorInvocation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2338,9 +2338,9 @@ public class MakiParser extends Parser {
 		public AnnotationContext annotation(int i) {
 			return getRuleContext(AnnotationContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AnnotatedDelegationSpecifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2348,7 +2348,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotatedDelegationSpecifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotatedDelegationSpecifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAnnotatedDelegationSpecifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2407,7 +2407,7 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ExplicitDelegationContext extends ParserRuleContext {
-		public TerminalNode BY() { return getToken(MakiParser.BY, 0); }
+		public TerminalNode BY() { return getToken(KotlinParser.BY, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -2417,9 +2417,9 @@ public class MakiParser extends Parser {
 		public FunctionTypeContext functionType() {
 			return getRuleContext(FunctionTypeContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ExplicitDelegationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2427,7 +2427,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_explicitDelegation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitExplicitDelegation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitExplicitDelegation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2504,21 +2504,21 @@ public class MakiParser extends Parser {
 	}
 
 	public static class TypeParametersContext extends ParserRuleContext {
-		public TerminalNode LANGLE() { return getToken(MakiParser.LANGLE, 0); }
+		public TerminalNode LANGLE() { return getToken(KotlinParser.LANGLE, 0); }
 		public List<TypeParameterContext> typeParameter() {
 			return getRuleContexts(TypeParameterContext.class);
 		}
 		public TypeParameterContext typeParameter(int i) {
 			return getRuleContext(TypeParameterContext.class,i);
 		}
-		public TerminalNode RANGLE() { return getToken(MakiParser.RANGLE, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RANGLE() { return getToken(KotlinParser.RANGLE, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public TypeParametersContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2526,7 +2526,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameters; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameters(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeParameters(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2667,11 +2667,11 @@ public class MakiParser extends Parser {
 		public TypeParameterModifiersContext typeParameterModifiers() {
 			return getRuleContext(TypeParameterModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -2681,7 +2681,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameter; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameter(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2773,20 +2773,20 @@ public class MakiParser extends Parser {
 	}
 
 	public static class TypeConstraintsContext extends ParserRuleContext {
-		public TerminalNode WHERE() { return getToken(MakiParser.WHERE, 0); }
+		public TerminalNode WHERE() { return getToken(KotlinParser.WHERE, 0); }
 		public List<TypeConstraintContext> typeConstraint() {
 			return getRuleContexts(TypeConstraintContext.class);
 		}
 		public TypeConstraintContext typeConstraint(int i) {
 			return getRuleContext(TypeConstraintContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public TypeConstraintsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2794,7 +2794,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeConstraints; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeConstraints(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeConstraints(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2888,7 +2888,7 @@ public class MakiParser extends Parser {
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -2898,9 +2898,9 @@ public class MakiParser extends Parser {
 		public AnnotationContext annotation(int i) {
 			return getRuleContext(AnnotationContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public TypeConstraintContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2908,7 +2908,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeConstraint; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeConstraint(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeConstraint(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3000,7 +3000,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classMemberDeclarations; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassMemberDeclarations(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitClassMemberDeclarations(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3068,7 +3068,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classMemberDeclaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassMemberDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitClassMemberDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3122,13 +3122,13 @@ public class MakiParser extends Parser {
 	}
 
 	public static class AnonymousInitializerContext extends ParserRuleContext {
-		public TerminalNode INIT() { return getToken(MakiParser.INIT, 0); }
+		public TerminalNode INIT() { return getToken(KotlinParser.INIT, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AnonymousInitializerContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3136,7 +3136,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_anonymousInitializer; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnonymousInitializer(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAnonymousInitializer(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3180,19 +3180,19 @@ public class MakiParser extends Parser {
 	}
 
 	public static class CompanionObjectContext extends ParserRuleContext {
-		public TerminalNode COMPANION() { return getToken(MakiParser.COMPANION, 0); }
-		public TerminalNode OBJECT() { return getToken(MakiParser.OBJECT, 0); }
+		public TerminalNode COMPANION() { return getToken(KotlinParser.COMPANION, 0); }
+		public TerminalNode OBJECT() { return getToken(KotlinParser.OBJECT, 0); }
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public DelegationSpecifiersContext delegationSpecifiers() {
 			return getRuleContext(DelegationSpecifiersContext.class,0);
 		}
@@ -3205,7 +3205,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_companionObject; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCompanionObject(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitCompanionObject(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3350,11 +3350,11 @@ public class MakiParser extends Parser {
 	}
 
 	public static class FunctionValueParametersContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<FunctionValueParameterContext> functionValueParameter() {
 			return getRuleContexts(FunctionValueParameterContext.class);
@@ -3362,9 +3362,9 @@ public class MakiParser extends Parser {
 		public FunctionValueParameterContext functionValueParameter(int i) {
 			return getRuleContext(FunctionValueParameterContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public FunctionValueParametersContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3372,7 +3372,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionValueParameters; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionValueParameters(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionValueParameters(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3519,13 +3519,13 @@ public class MakiParser extends Parser {
 		public ParameterModifiersContext parameterModifiers() {
 			return getRuleContext(ParameterModifiersContext.class,0);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public FunctionValueParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3533,7 +3533,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionValueParameter; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionValueParameter(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionValueParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3614,7 +3614,7 @@ public class MakiParser extends Parser {
 	}
 
 	public static class FunctionDeclarationContext extends ParserRuleContext {
-		public TerminalNode FUN() { return getToken(MakiParser.FUN, 0); }
+		public TerminalNode FUN() { return getToken(KotlinParser.FUN, 0); }
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
@@ -3630,12 +3630,12 @@ public class MakiParser extends Parser {
 		public ReceiverTypeContext receiverType() {
 			return getRuleContext(ReceiverTypeContext.class,0);
 		}
-		public TerminalNode DOT() { return getToken(MakiParser.DOT, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode DOT() { return getToken(KotlinParser.DOT, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -3651,7 +3651,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionDeclaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3876,13 +3876,13 @@ public class MakiParser extends Parser {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public FunctionBodyContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3890,7 +3890,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionBody; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionBody(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionBody(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3960,11 +3960,11 @@ public class MakiParser extends Parser {
 		public AnnotationContext annotation(int i) {
 			return getRuleContext(AnnotationContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -3974,7 +3974,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variableDeclaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitVariableDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitVariableDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -4070,21 +4070,21 @@ public class MakiParser extends Parser {
 	}
 
 	public static class MultiVariableDeclarationContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public List<VariableDeclarationContext> variableDeclaration() {
 			return getRuleContexts(VariableDeclarationContext.class);
 		}
 		public VariableDeclarationContext variableDeclaration(int i) {
 			return getRuleContext(VariableDeclarationContext.class,i);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public MultiVariableDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -4092,7 +4092,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_multiVariableDeclaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiVariableDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMultiVariableDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -4227,8 +4227,8 @@ public class MakiParser extends Parser {
 	}
 
 	public static class PropertyDeclarationContext extends ParserRuleContext {
-		public TerminalNode VAL() { return getToken(MakiParser.VAL, 0); }
-		public TerminalNode VAR() { return getToken(MakiParser.VAR, 0); }
+		public TerminalNode VAL() { return getToken(KotlinParser.VAL, 0); }
+		public TerminalNode VAR() { return getToken(KotlinParser.VAR, 0); }
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
@@ -4238,14 +4238,14 @@ public class MakiParser extends Parser {
 		public ReceiverTypeContext receiverType() {
 			return getRuleContext(ReceiverTypeContext.class,0);
 		}
-		public TerminalNode DOT() { return getToken(MakiParser.DOT, 0); }
+		public TerminalNode DOT() { return getToken(KotlinParser.DOT, 0); }
 		public TypeConstraintsContext typeConstraints() {
 			return getRuleContext(TypeConstraintsContext.class,0);
 		}
-		public TerminalNode SEMICOLON() { return getToken(MakiParser.SEMICOLON, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode SEMICOLON() { return getToken(KotlinParser.SEMICOLON, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public MultiVariableDeclarationContext multiVariableDeclaration() {
 			return getRuleContext(MultiVariableDeclarationContext.class,0);
@@ -4253,7 +4253,7 @@ public class MakiParser extends Parser {
 		public VariableDeclarationContext variableDeclaration() {
 			return getRuleContext(VariableDeclarationContext.class,0);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -4275,7 +4275,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_propertyDeclaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPropertyDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPropertyDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -4697,13 +4697,13 @@ public class MakiParser extends Parser {
 	}
 
 	public static class PropertyDelegateContext extends ParserRuleContext {
-		public TerminalNode BY() { return getToken(MakiParser.BY, 0); }
+		public TerminalNode BY() { return getToken(KotlinParser.BY, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public PropertyDelegateContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -4711,7 +4711,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_propertyDelegate; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPropertyDelegate(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPropertyDelegate(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -4757,20 +4757,20 @@ public class MakiParser extends Parser {
 	}
 
 	public static class GetterContext extends ParserRuleContext {
-		public TerminalNode GET() { return getToken(MakiParser.GET, 0); }
+		public TerminalNode GET() { return getToken(KotlinParser.GET, 0); }
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
 		public FunctionBodyContext functionBody() {
 			return getRuleContext(FunctionBodyContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -4780,7 +4780,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_getter; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitGetter(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitGetter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -4929,24 +4929,24 @@ public class MakiParser extends Parser {
 	}
 
 	public static class SetterContext extends ParserRuleContext {
-		public TerminalNode SET() { return getToken(MakiParser.SET, 0); }
+		public TerminalNode SET() { return getToken(KotlinParser.SET, 0); }
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public ParameterWithOptionalTypeContext parameterWithOptionalType() {
 			return getRuleContext(ParameterWithOptionalTypeContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
 		public FunctionBodyContext functionBody() {
 			return getRuleContext(FunctionBodyContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COMMA() { return getToken(MakiParser.COMMA, 0); }
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COMMA() { return getToken(KotlinParser.COMMA, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -4956,7 +4956,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_setter; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSetter(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSetter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -5145,11 +5145,11 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ParametersWithOptionalTypeContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<ParameterWithOptionalTypeContext> parameterWithOptionalType() {
 			return getRuleContexts(ParameterWithOptionalTypeContext.class);
@@ -5157,9 +5157,9 @@ public class MakiParser extends Parser {
 		public ParameterWithOptionalTypeContext parameterWithOptionalType(int i) {
 			return getRuleContext(ParameterWithOptionalTypeContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public ParametersWithOptionalTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -5167,7 +5167,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parametersWithOptionalType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParametersWithOptionalType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParametersWithOptionalType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -5314,11 +5314,11 @@ public class MakiParser extends Parser {
 		public ParameterModifiersContext parameterModifiers() {
 			return getRuleContext(ParameterModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -5328,7 +5328,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parameterWithOptionalType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameterWithOptionalType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParameterWithOptionalType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -5412,13 +5412,13 @@ public class MakiParser extends Parser {
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -5426,7 +5426,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parameter; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameter(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -5486,18 +5486,18 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ObjectDeclarationContext extends ParserRuleContext {
-		public TerminalNode OBJECT() { return getToken(MakiParser.OBJECT, 0); }
+		public TerminalNode OBJECT() { return getToken(KotlinParser.OBJECT, 0); }
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public DelegationSpecifiersContext delegationSpecifiers() {
 			return getRuleContext(DelegationSpecifiersContext.class,0);
 		}
@@ -5510,7 +5510,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_objectDeclaration; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitObjectDeclaration(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitObjectDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -5631,18 +5631,18 @@ public class MakiParser extends Parser {
 	}
 
 	public static class SecondaryConstructorContext extends ParserRuleContext {
-		public TerminalNode CONSTRUCTOR() { return getToken(MakiParser.CONSTRUCTOR, 0); }
+		public TerminalNode CONSTRUCTOR() { return getToken(KotlinParser.CONSTRUCTOR, 0); }
 		public FunctionValueParametersContext functionValueParameters() {
 			return getRuleContext(FunctionValueParametersContext.class,0);
 		}
 		public ModifiersContext modifiers() {
 			return getRuleContext(ModifiersContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public ConstructorDelegationCallContext constructorDelegationCall() {
 			return getRuleContext(ConstructorDelegationCallContext.class,0);
 		}
@@ -5655,7 +5655,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_secondaryConstructor; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSecondaryConstructor(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSecondaryConstructor(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -5776,22 +5776,22 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ConstructorDelegationCallContext extends ParserRuleContext {
-		public TerminalNode THIS() { return getToken(MakiParser.THIS, 0); }
+		public TerminalNode THIS() { return getToken(KotlinParser.THIS, 0); }
 		public ValueArgumentsContext valueArguments() {
 			return getRuleContext(ValueArgumentsContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode SUPER() { return getToken(MakiParser.SUPER, 0); }
+		public TerminalNode SUPER() { return getToken(KotlinParser.SUPER, 0); }
 		public ConstructorDelegationCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_constructorDelegationCall; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitConstructorDelegationCall(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitConstructorDelegationCall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -5866,16 +5866,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class EnumClassBodyContext extends ParserRuleContext {
-		public TerminalNode LCURL() { return getToken(MakiParser.LCURL, 0); }
-		public TerminalNode RCURL() { return getToken(MakiParser.RCURL, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode LCURL() { return getToken(KotlinParser.LCURL, 0); }
+		public TerminalNode RCURL() { return getToken(KotlinParser.RCURL, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public EnumEntriesContext enumEntries() {
 			return getRuleContext(EnumEntriesContext.class,0);
 		}
-		public TerminalNode SEMICOLON() { return getToken(MakiParser.SEMICOLON, 0); }
+		public TerminalNode SEMICOLON() { return getToken(KotlinParser.SEMICOLON, 0); }
 		public ClassMemberDeclarationsContext classMemberDeclarations() {
 			return getRuleContext(ClassMemberDeclarationsContext.class,0);
 		}
@@ -5885,7 +5885,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumClassBody; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEnumClassBody(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitEnumClassBody(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6004,13 +6004,13 @@ public class MakiParser extends Parser {
 		public EnumEntryContext enumEntry(int i) {
 			return getRuleContext(EnumEntryContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public EnumEntriesContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -6018,7 +6018,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumEntries; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEnumEntries(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitEnumEntries(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6131,9 +6131,9 @@ public class MakiParser extends Parser {
 		public ClassBodyContext classBody() {
 			return getRuleContext(ClassBodyContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public EnumEntryContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -6141,7 +6141,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumEntry; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEnumEntry(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitEnumEntry(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6262,7 +6262,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_type; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6328,14 +6328,14 @@ public class MakiParser extends Parser {
 		public UserTypeContext userType() {
 			return getRuleContext(UserTypeContext.class,0);
 		}
-		public TerminalNode DYNAMIC() { return getToken(MakiParser.DYNAMIC, 0); }
+		public TerminalNode DYNAMIC() { return getToken(KotlinParser.DYNAMIC, 0); }
 		public TypeReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeReference; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeReference(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeReference(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6381,9 +6381,9 @@ public class MakiParser extends Parser {
 		public ParenthesizedTypeContext parenthesizedType() {
 			return getRuleContext(ParenthesizedTypeContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<QuestContext> quest() {
 			return getRuleContexts(QuestContext.class);
@@ -6397,7 +6397,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_nullableType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitNullableType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitNullableType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6522,15 +6522,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class QuestContext extends ParserRuleContext {
-		public TerminalNode QUEST_NO_WS() { return getToken(MakiParser.QUEST_NO_WS, 0); }
-		public TerminalNode QUEST_WS() { return getToken(MakiParser.QUEST_WS, 0); }
+		public TerminalNode QUEST_NO_WS() { return getToken(KotlinParser.QUEST_NO_WS, 0); }
+		public TerminalNode QUEST_WS() { return getToken(KotlinParser.QUEST_WS, 0); }
 		public QuestContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_quest; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitQuest(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitQuest(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6572,13 +6572,13 @@ public class MakiParser extends Parser {
 		public SimpleUserTypeContext simpleUserType(int i) {
 			return getRuleContext(SimpleUserTypeContext.class,i);
 		}
-		public List<TerminalNode> DOT() { return getTokens(MakiParser.DOT); }
+		public List<TerminalNode> DOT() { return getTokens(KotlinParser.DOT); }
 		public TerminalNode DOT(int i) {
-			return getToken(MakiParser.DOT, i);
+			return getToken(KotlinParser.DOT, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public UserTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -6586,7 +6586,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_userType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitUserType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitUserType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6667,9 +6667,9 @@ public class MakiParser extends Parser {
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public SimpleUserTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -6677,7 +6677,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_simpleUserType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSimpleUserType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSimpleUserType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6735,14 +6735,14 @@ public class MakiParser extends Parser {
 		public TypeProjectionModifiersContext typeProjectionModifiers() {
 			return getRuleContext(TypeProjectionModifiersContext.class,0);
 		}
-		public TerminalNode MULT() { return getToken(MakiParser.MULT, 0); }
+		public TerminalNode MULT() { return getToken(KotlinParser.MULT, 0); }
 		public TypeProjectionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeProjection; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeProjection(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeProjection(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6856,7 +6856,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeProjectionModifiers; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeProjectionModifiers(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeProjectionModifiers(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6905,9 +6905,9 @@ public class MakiParser extends Parser {
 		public VarianceModifierContext varianceModifier() {
 			return getRuleContext(VarianceModifierContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class,0);
@@ -6918,7 +6918,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeProjectionModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeProjectionModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeProjectionModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -6980,17 +6980,17 @@ public class MakiParser extends Parser {
 		public FunctionTypeParametersContext functionTypeParameters() {
 			return getRuleContext(FunctionTypeParametersContext.class,0);
 		}
-		public TerminalNode ARROW() { return getToken(MakiParser.ARROW, 0); }
+		public TerminalNode ARROW() { return getToken(KotlinParser.ARROW, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
 		public ReceiverTypeContext receiverType() {
 			return getRuleContext(ReceiverTypeContext.class,0);
 		}
-		public TerminalNode DOT() { return getToken(MakiParser.DOT, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode DOT() { return getToken(KotlinParser.DOT, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public FunctionTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -6998,7 +6998,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7098,11 +7098,11 @@ public class MakiParser extends Parser {
 	}
 
 	public static class FunctionTypeParametersContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<ParameterContext> parameter() {
 			return getRuleContexts(ParameterContext.class);
@@ -7116,9 +7116,9 @@ public class MakiParser extends Parser {
 		public TypeContext type(int i) {
 			return getRuleContext(TypeContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public FunctionTypeParametersContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -7126,7 +7126,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionTypeParameters; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionTypeParameters(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionTypeParameters(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7287,14 +7287,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ParenthesizedTypeContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ParenthesizedTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -7302,7 +7302,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parenthesizedType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParenthesizedType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7380,7 +7380,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_receiverType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitReceiverType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitReceiverType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7437,14 +7437,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ParenthesizedUserTypeContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public UserTypeContext userType() {
 			return getRuleContext(UserTypeContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ParenthesizedUserTypeContext parenthesizedUserType() {
 			return getRuleContext(ParenthesizedUserTypeContext.class,0);
@@ -7455,7 +7455,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parenthesizedUserType; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedUserType(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParenthesizedUserType(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7578,7 +7578,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statements; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitStatements(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitStatements(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7672,7 +7672,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitStatement(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7806,11 +7806,11 @@ public class MakiParser extends Parser {
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode AT_NO_WS() { return getToken(MakiParser.AT_NO_WS, 0); }
-		public TerminalNode AT_POST_WS() { return getToken(MakiParser.AT_POST_WS, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode AT_NO_WS() { return getToken(KotlinParser.AT_NO_WS, 0); }
+		public TerminalNode AT_POST_WS() { return getToken(KotlinParser.AT_POST_WS, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public LabelContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -7818,7 +7818,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_label; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLabel(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLabel(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7885,7 +7885,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_controlStructureBody; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitControlStructureBody(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitControlStructureBody(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -7925,14 +7925,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class BlockContext extends ParserRuleContext {
-		public TerminalNode LCURL() { return getToken(MakiParser.LCURL, 0); }
+		public TerminalNode LCURL() { return getToken(KotlinParser.LCURL, 0); }
 		public StatementsContext statements() {
 			return getRuleContext(StatementsContext.class,0);
 		}
-		public TerminalNode RCURL() { return getToken(MakiParser.RCURL, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RCURL() { return getToken(KotlinParser.RCURL, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public BlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -7940,7 +7940,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_block; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitBlock(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitBlock(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8018,7 +8018,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_loopStatement; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLoopStatement(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLoopStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8067,22 +8067,22 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ForStatementContext extends ParserRuleContext {
-		public TerminalNode FOR() { return getToken(MakiParser.FOR, 0); }
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
-		public TerminalNode IN() { return getToken(MakiParser.IN, 0); }
+		public TerminalNode FOR() { return getToken(KotlinParser.FOR, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
+		public TerminalNode IN() { return getToken(KotlinParser.IN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
 		public VariableDeclarationContext variableDeclaration() {
 			return getRuleContext(VariableDeclarationContext.class,0);
 		}
 		public MultiVariableDeclarationContext multiVariableDeclaration() {
 			return getRuleContext(MultiVariableDeclarationContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
@@ -8099,7 +8099,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_forStatement; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitForStatement(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitForStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8259,27 +8259,27 @@ public class MakiParser extends Parser {
 	}
 
 	public static class WhileStatementContext extends ParserRuleContext {
-		public TerminalNode WHILE() { return getToken(MakiParser.WHILE, 0); }
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode WHILE() { return getToken(KotlinParser.WHILE, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
 		public ControlStructureBodyContext controlStructureBody() {
 			return getRuleContext(ControlStructureBodyContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode SEMICOLON() { return getToken(MakiParser.SEMICOLON, 0); }
+		public TerminalNode SEMICOLON() { return getToken(KotlinParser.SEMICOLON, 0); }
 		public WhileStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_whileStatement; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhileStatement(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitWhileStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8395,16 +8395,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class DoWhileStatementContext extends ParserRuleContext {
-		public TerminalNode DO() { return getToken(MakiParser.DO, 0); }
-		public TerminalNode WHILE() { return getToken(MakiParser.WHILE, 0); }
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode DO() { return getToken(KotlinParser.DO, 0); }
+		public TerminalNode WHILE() { return getToken(KotlinParser.WHILE, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ControlStructureBodyContext controlStructureBody() {
 			return getRuleContext(ControlStructureBodyContext.class,0);
@@ -8415,7 +8415,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_doWhileStatement; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDoWhileStatement(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitDoWhileStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8509,13 +8509,13 @@ public class MakiParser extends Parser {
 		public DirectlyAssignableExpressionContext directlyAssignableExpression() {
 			return getRuleContext(DirectlyAssignableExpressionContext.class,0);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AssignableExpressionContext assignableExpression() {
 			return getRuleContext(AssignableExpressionContext.class,0);
@@ -8529,7 +8529,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assignment; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignment(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAssignment(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8610,19 +8610,19 @@ public class MakiParser extends Parser {
 	}
 
 	public static class SemiContext extends ParserRuleContext {
-		public TerminalNode SEMICOLON() { return getToken(MakiParser.SEMICOLON, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode SEMICOLON() { return getToken(KotlinParser.SEMICOLON, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode EOF() { return getToken(MakiParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(KotlinParser.EOF, 0); }
 		public SemiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_semi; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSemi(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSemi(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8691,22 +8691,22 @@ public class MakiParser extends Parser {
 	}
 
 	public static class SemisContext extends ParserRuleContext {
-		public List<TerminalNode> SEMICOLON() { return getTokens(MakiParser.SEMICOLON); }
+		public List<TerminalNode> SEMICOLON() { return getTokens(KotlinParser.SEMICOLON); }
 		public TerminalNode SEMICOLON(int i) {
-			return getToken(MakiParser.SEMICOLON, i);
+			return getToken(KotlinParser.SEMICOLON, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode EOF() { return getToken(MakiParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(KotlinParser.EOF, 0); }
 		public SemisContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_semis; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSemis(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSemis(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8786,7 +8786,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8819,13 +8819,13 @@ public class MakiParser extends Parser {
 		public ConjunctionContext conjunction(int i) {
 			return getRuleContext(ConjunctionContext.class,i);
 		}
-		public List<TerminalNode> DISJ() { return getTokens(MakiParser.DISJ); }
+		public List<TerminalNode> DISJ() { return getTokens(KotlinParser.DISJ); }
 		public TerminalNode DISJ(int i) {
-			return getToken(MakiParser.DISJ, i);
+			return getToken(KotlinParser.DISJ, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public DisjunctionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -8833,7 +8833,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_disjunction; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDisjunction(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitDisjunction(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -8916,13 +8916,13 @@ public class MakiParser extends Parser {
 		public EqualityContext equality(int i) {
 			return getRuleContext(EqualityContext.class,i);
 		}
-		public List<TerminalNode> CONJ() { return getTokens(MakiParser.CONJ); }
+		public List<TerminalNode> CONJ() { return getTokens(KotlinParser.CONJ); }
 		public TerminalNode CONJ(int i) {
-			return getToken(MakiParser.CONJ, i);
+			return getToken(KotlinParser.CONJ, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ConjunctionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -8930,7 +8930,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_conjunction; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitConjunction(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitConjunction(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9019,9 +9019,9 @@ public class MakiParser extends Parser {
 		public EqualityOperatorContext equalityOperator(int i) {
 			return getRuleContext(EqualityOperatorContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public EqualityContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9029,7 +9029,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_equality; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEquality(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitEquality(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9103,9 +9103,9 @@ public class MakiParser extends Parser {
 		public ComparisonOperatorContext comparisonOperator(int i) {
 			return getRuleContext(ComparisonOperatorContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ComparisonContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9113,7 +9113,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_comparison; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitComparison(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitComparison(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9190,7 +9190,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_genericCallLikeComparison; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitGenericCallLikeComparison(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitGenericCallLikeComparison(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9258,9 +9258,9 @@ public class MakiParser extends Parser {
 		public TypeContext type(int i) {
 			return getRuleContext(TypeContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public InfixOperationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9268,7 +9268,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_infixOperation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInfixOperation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitInfixOperation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9375,9 +9375,9 @@ public class MakiParser extends Parser {
 		public ElvisContext elvis(int i) {
 			return getRuleContext(ElvisContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ElvisExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9385,7 +9385,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elvisExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitElvisExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitElvisExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9462,15 +9462,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ElvisContext extends ParserRuleContext {
-		public TerminalNode QUEST_NO_WS() { return getToken(MakiParser.QUEST_NO_WS, 0); }
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode QUEST_NO_WS() { return getToken(KotlinParser.QUEST_NO_WS, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public ElvisContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elvis; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitElvis(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitElvis(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9511,9 +9511,9 @@ public class MakiParser extends Parser {
 		public SimpleIdentifierContext simpleIdentifier(int i) {
 			return getRuleContext(SimpleIdentifierContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public InfixFunctionCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9521,7 +9521,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_infixFunctionCall; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInfixFunctionCall(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitInfixFunctionCall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9589,13 +9589,13 @@ public class MakiParser extends Parser {
 		public AdditiveExpressionContext additiveExpression(int i) {
 			return getRuleContext(AdditiveExpressionContext.class,i);
 		}
-		public List<TerminalNode> RANGE() { return getTokens(MakiParser.RANGE); }
+		public List<TerminalNode> RANGE() { return getTokens(KotlinParser.RANGE); }
 		public TerminalNode RANGE(int i) {
-			return getToken(MakiParser.RANGE, i);
+			return getToken(KotlinParser.RANGE, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public RangeExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9603,7 +9603,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_rangeExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitRangeExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitRangeExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9677,9 +9677,9 @@ public class MakiParser extends Parser {
 		public AdditiveOperatorContext additiveOperator(int i) {
 			return getRuleContext(AdditiveOperatorContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AdditiveExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9687,7 +9687,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_additiveExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAdditiveExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAdditiveExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9761,9 +9761,9 @@ public class MakiParser extends Parser {
 		public MultiplicativeOperatorContext multiplicativeOperator(int i) {
 			return getRuleContext(MultiplicativeOperatorContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public MultiplicativeExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9771,7 +9771,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_multiplicativeExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiplicativeExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMultiplicativeExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9848,9 +9848,9 @@ public class MakiParser extends Parser {
 		public TypeContext type(int i) {
 			return getRuleContext(TypeContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AsExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -9858,7 +9858,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_asExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAsExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAsExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -9948,7 +9948,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_prefixUnaryExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrefixUnaryExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPrefixUnaryExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10001,9 +10001,9 @@ public class MakiParser extends Parser {
 		public PrefixUnaryOperatorContext prefixUnaryOperator() {
 			return getRuleContext(PrefixUnaryOperatorContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public UnaryPrefixContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -10011,7 +10011,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unaryPrefix; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitUnaryPrefix(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitUnaryPrefix(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10144,7 +10144,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postfixUnaryExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPostfixUnaryExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPostfixUnaryExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10226,7 +10226,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postfixUnarySuffix; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPostfixUnarySuffix(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPostfixUnarySuffix(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10305,7 +10305,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_directlyAssignableExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitDirectlyAssignableExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitDirectlyAssignableExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10354,14 +10354,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ParenthesizedDirectlyAssignableExpressionContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public DirectlyAssignableExpressionContext directlyAssignableExpression() {
 			return getRuleContext(DirectlyAssignableExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ParenthesizedDirectlyAssignableExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -10369,7 +10369,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parenthesizedDirectlyAssignableExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedDirectlyAssignableExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParenthesizedDirectlyAssignableExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10444,7 +10444,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assignableExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignableExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAssignableExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10484,14 +10484,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ParenthesizedAssignableExpressionContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public AssignableExpressionContext assignableExpression() {
 			return getRuleContext(AssignableExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ParenthesizedAssignableExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -10499,7 +10499,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parenthesizedAssignableExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedAssignableExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParenthesizedAssignableExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10577,7 +10577,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assignableSuffix; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignableSuffix(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAssignableSuffix(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10629,21 +10629,21 @@ public class MakiParser extends Parser {
 	}
 
 	public static class IndexingSuffixContext extends ParserRuleContext {
-		public TerminalNode LSQUARE() { return getToken(MakiParser.LSQUARE, 0); }
+		public TerminalNode LSQUARE() { return getToken(KotlinParser.LSQUARE, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public TerminalNode RSQUARE() { return getToken(MakiParser.RSQUARE, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RSQUARE() { return getToken(KotlinParser.RSQUARE, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public IndexingSuffixContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -10651,7 +10651,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_indexingSuffix; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIndexingSuffix(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitIndexingSuffix(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10795,10 +10795,10 @@ public class MakiParser extends Parser {
 		public ParenthesizedExpressionContext parenthesizedExpression() {
 			return getRuleContext(ParenthesizedExpressionContext.class,0);
 		}
-		public TerminalNode CLASS() { return getToken(MakiParser.CLASS, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode CLASS() { return getToken(KotlinParser.CLASS, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public NavigationSuffixContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -10806,7 +10806,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_navigationSuffix; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitNavigationSuffix(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitNavigationSuffix(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -10947,7 +10947,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_callSuffix; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCallSuffix(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitCallSuffix(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -11030,9 +11030,9 @@ public class MakiParser extends Parser {
 		public LabelContext label() {
 			return getRuleContext(LabelContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AnnotatedLambdaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -11040,7 +11040,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotatedLambda; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotatedLambda(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAnnotatedLambda(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -11106,21 +11106,21 @@ public class MakiParser extends Parser {
 	}
 
 	public static class TypeArgumentsContext extends ParserRuleContext {
-		public TerminalNode LANGLE() { return getToken(MakiParser.LANGLE, 0); }
+		public TerminalNode LANGLE() { return getToken(KotlinParser.LANGLE, 0); }
 		public List<TypeProjectionContext> typeProjection() {
 			return getRuleContexts(TypeProjectionContext.class);
 		}
 		public TypeProjectionContext typeProjection(int i) {
 			return getRuleContext(TypeProjectionContext.class,i);
 		}
-		public TerminalNode RANGLE() { return getToken(MakiParser.RANGLE, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RANGLE() { return getToken(KotlinParser.RANGLE, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public TypeArgumentsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -11128,7 +11128,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeArguments; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeArguments(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeArguments(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -11259,11 +11259,11 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ValueArgumentsContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<ValueArgumentContext> valueArgument() {
 			return getRuleContexts(ValueArgumentContext.class);
@@ -11271,9 +11271,9 @@ public class MakiParser extends Parser {
 		public ValueArgumentContext valueArgument(int i) {
 			return getRuleContext(ValueArgumentContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public ValueArgumentsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -11281,7 +11281,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_valueArguments; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitValueArguments(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitValueArguments(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -11451,22 +11451,22 @@ public class MakiParser extends Parser {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
-		public TerminalNode MULT() { return getToken(MakiParser.MULT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
+		public TerminalNode MULT() { return getToken(KotlinParser.MULT, 0); }
 		public ValueArgumentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_valueArgument; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitValueArgument(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitValueArgument(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -11637,7 +11637,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrimaryExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPrimaryExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -11761,14 +11761,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ParenthesizedExpressionContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ParenthesizedExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -11776,7 +11776,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parenthesizedExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParenthesizedExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParenthesizedExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -11839,21 +11839,21 @@ public class MakiParser extends Parser {
 	}
 
 	public static class CollectionLiteralContext extends ParserRuleContext {
-		public TerminalNode LSQUARE() { return getToken(MakiParser.LSQUARE, 0); }
+		public TerminalNode LSQUARE() { return getToken(KotlinParser.LSQUARE, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public TerminalNode RSQUARE() { return getToken(MakiParser.RSQUARE, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RSQUARE() { return getToken(KotlinParser.RSQUARE, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
 		public CollectionLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -11861,7 +11861,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_collectionLiteral; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCollectionLiteral(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitCollectionLiteral(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12025,22 +12025,22 @@ public class MakiParser extends Parser {
 	}
 
 	public static class LiteralConstantContext extends ParserRuleContext {
-		public TerminalNode BooleanLiteral() { return getToken(MakiParser.BooleanLiteral, 0); }
-		public TerminalNode IntegerLiteral() { return getToken(MakiParser.IntegerLiteral, 0); }
-		public TerminalNode HexLiteral() { return getToken(MakiParser.HexLiteral, 0); }
-		public TerminalNode BinLiteral() { return getToken(MakiParser.BinLiteral, 0); }
-		public TerminalNode CharacterLiteral() { return getToken(MakiParser.CharacterLiteral, 0); }
-		public TerminalNode RealLiteral() { return getToken(MakiParser.RealLiteral, 0); }
-		public TerminalNode NullLiteral() { return getToken(MakiParser.NullLiteral, 0); }
-		public TerminalNode LongLiteral() { return getToken(MakiParser.LongLiteral, 0); }
-		public TerminalNode UnsignedLiteral() { return getToken(MakiParser.UnsignedLiteral, 0); }
+		public TerminalNode BooleanLiteral() { return getToken(KotlinParser.BooleanLiteral, 0); }
+		public TerminalNode IntegerLiteral() { return getToken(KotlinParser.IntegerLiteral, 0); }
+		public TerminalNode HexLiteral() { return getToken(KotlinParser.HexLiteral, 0); }
+		public TerminalNode BinLiteral() { return getToken(KotlinParser.BinLiteral, 0); }
+		public TerminalNode CharacterLiteral() { return getToken(KotlinParser.CharacterLiteral, 0); }
+		public TerminalNode RealLiteral() { return getToken(KotlinParser.RealLiteral, 0); }
+		public TerminalNode NullLiteral() { return getToken(KotlinParser.NullLiteral, 0); }
+		public TerminalNode LongLiteral() { return getToken(KotlinParser.LongLiteral, 0); }
+		public TerminalNode UnsignedLiteral() { return getToken(KotlinParser.UnsignedLiteral, 0); }
 		public LiteralConstantContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_literalConstant; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLiteralConstant(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLiteralConstant(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12088,7 +12088,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stringLiteral; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitStringLiteral(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitStringLiteral(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12130,8 +12130,8 @@ public class MakiParser extends Parser {
 	}
 
 	public static class LineStringLiteralContext extends ParserRuleContext {
-		public TerminalNode QUOTE_OPEN() { return getToken(MakiParser.QUOTE_OPEN, 0); }
-		public TerminalNode QUOTE_CLOSE() { return getToken(MakiParser.QUOTE_CLOSE, 0); }
+		public TerminalNode QUOTE_OPEN() { return getToken(KotlinParser.QUOTE_OPEN, 0); }
+		public TerminalNode QUOTE_CLOSE() { return getToken(KotlinParser.QUOTE_CLOSE, 0); }
 		public List<LineStringContentContext> lineStringContent() {
 			return getRuleContexts(LineStringContentContext.class);
 		}
@@ -12150,7 +12150,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lineStringLiteral; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLineStringLiteral(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLineStringLiteral(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12210,8 +12210,8 @@ public class MakiParser extends Parser {
 	}
 
 	public static class MultiLineStringLiteralContext extends ParserRuleContext {
-		public TerminalNode TRIPLE_QUOTE_OPEN() { return getToken(MakiParser.TRIPLE_QUOTE_OPEN, 0); }
-		public TerminalNode TRIPLE_QUOTE_CLOSE() { return getToken(MakiParser.TRIPLE_QUOTE_CLOSE, 0); }
+		public TerminalNode TRIPLE_QUOTE_OPEN() { return getToken(KotlinParser.TRIPLE_QUOTE_OPEN, 0); }
+		public TerminalNode TRIPLE_QUOTE_CLOSE() { return getToken(KotlinParser.TRIPLE_QUOTE_CLOSE, 0); }
 		public List<MultiLineStringContentContext> multiLineStringContent() {
 			return getRuleContexts(MultiLineStringContentContext.class);
 		}
@@ -12224,9 +12224,9 @@ public class MakiParser extends Parser {
 		public MultiLineStringExpressionContext multiLineStringExpression(int i) {
 			return getRuleContext(MultiLineStringExpressionContext.class,i);
 		}
-		public List<TerminalNode> MultiLineStringQuote() { return getTokens(MakiParser.MultiLineStringQuote); }
+		public List<TerminalNode> MultiLineStringQuote() { return getTokens(KotlinParser.MultiLineStringQuote); }
 		public TerminalNode MultiLineStringQuote(int i) {
-			return getToken(MakiParser.MultiLineStringQuote, i);
+			return getToken(KotlinParser.MultiLineStringQuote, i);
 		}
 		public MultiLineStringLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -12234,7 +12234,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_multiLineStringLiteral; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiLineStringLiteral(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMultiLineStringLiteral(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12296,16 +12296,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class LineStringContentContext extends ParserRuleContext {
-		public TerminalNode LineStrText() { return getToken(MakiParser.LineStrText, 0); }
-		public TerminalNode LineStrEscapedChar() { return getToken(MakiParser.LineStrEscapedChar, 0); }
-		public TerminalNode LineStrRef() { return getToken(MakiParser.LineStrRef, 0); }
+		public TerminalNode LineStrText() { return getToken(KotlinParser.LineStrText, 0); }
+		public TerminalNode LineStrEscapedChar() { return getToken(KotlinParser.LineStrEscapedChar, 0); }
+		public TerminalNode LineStrRef() { return getToken(KotlinParser.LineStrRef, 0); }
 		public LineStringContentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_lineStringContent; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLineStringContent(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLineStringContent(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12341,18 +12341,18 @@ public class MakiParser extends Parser {
 	}
 
 	public static class LineStringExpressionContext extends ParserRuleContext {
-		public TerminalNode LineStrExprStart() { return getToken(MakiParser.LineStrExprStart, 0); }
+		public TerminalNode LineStrExprStart() { return getToken(KotlinParser.LineStrExprStart, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RCURL() { return getToken(MakiParser.RCURL, 0); }
+		public TerminalNode RCURL() { return getToken(KotlinParser.RCURL, 0); }
 		public LineStringExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_lineStringExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLineStringExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLineStringExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12383,16 +12383,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class MultiLineStringContentContext extends ParserRuleContext {
-		public TerminalNode MultiLineStrText() { return getToken(MakiParser.MultiLineStrText, 0); }
-		public TerminalNode MultiLineStringQuote() { return getToken(MakiParser.MultiLineStringQuote, 0); }
-		public TerminalNode MultiLineStrRef() { return getToken(MakiParser.MultiLineStrRef, 0); }
+		public TerminalNode MultiLineStrText() { return getToken(KotlinParser.MultiLineStrText, 0); }
+		public TerminalNode MultiLineStringQuote() { return getToken(KotlinParser.MultiLineStringQuote, 0); }
+		public TerminalNode MultiLineStrRef() { return getToken(KotlinParser.MultiLineStrRef, 0); }
 		public MultiLineStringContentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiLineStringContent; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiLineStringContent(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMultiLineStringContent(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12428,14 +12428,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class MultiLineStringExpressionContext extends ParserRuleContext {
-		public TerminalNode MultiLineStrExprStart() { return getToken(MakiParser.MultiLineStrExprStart, 0); }
+		public TerminalNode MultiLineStrExprStart() { return getToken(KotlinParser.MultiLineStrExprStart, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RCURL() { return getToken(MakiParser.RCURL, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RCURL() { return getToken(KotlinParser.RCURL, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public MultiLineStringExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -12443,7 +12443,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_multiLineStringExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiLineStringExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMultiLineStringExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12506,16 +12506,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class LambdaLiteralContext extends ParserRuleContext {
-		public TerminalNode LCURL() { return getToken(MakiParser.LCURL, 0); }
+		public TerminalNode LCURL() { return getToken(KotlinParser.LCURL, 0); }
 		public StatementsContext statements() {
 			return getRuleContext(StatementsContext.class,0);
 		}
-		public TerminalNode RCURL() { return getToken(MakiParser.RCURL, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode RCURL() { return getToken(KotlinParser.RCURL, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode ARROW() { return getToken(MakiParser.ARROW, 0); }
+		public TerminalNode ARROW() { return getToken(KotlinParser.ARROW, 0); }
 		public LambdaParametersContext lambdaParameters() {
 			return getRuleContext(LambdaParametersContext.class,0);
 		}
@@ -12525,7 +12525,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lambdaLiteral; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLambdaLiteral(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLambdaLiteral(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12683,13 +12683,13 @@ public class MakiParser extends Parser {
 		public LambdaParameterContext lambdaParameter(int i) {
 			return getRuleContext(LambdaParameterContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public LambdaParametersContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -12697,7 +12697,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lambdaParameters; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLambdaParameters(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLambdaParameters(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12804,13 +12804,13 @@ public class MakiParser extends Parser {
 		public MultiVariableDeclarationContext multiVariableDeclaration() {
 			return getRuleContext(MultiVariableDeclarationContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public LambdaParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -12818,7 +12818,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lambdaParameter; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitLambdaParameter(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitLambdaParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -12950,7 +12950,7 @@ public class MakiParser extends Parser {
 	}
 
 	public static class AnonymousFunctionContext extends ParserRuleContext {
-		public TerminalNode FUN() { return getToken(MakiParser.FUN, 0); }
+		public TerminalNode FUN() { return getToken(KotlinParser.FUN, 0); }
 		public ParametersWithOptionalTypeContext parametersWithOptionalType() {
 			return getRuleContext(ParametersWithOptionalTypeContext.class,0);
 		}
@@ -12960,12 +12960,12 @@ public class MakiParser extends Parser {
 		public TypeContext type(int i) {
 			return getRuleContext(TypeContext.class,i);
 		}
-		public TerminalNode DOT() { return getToken(MakiParser.DOT, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode DOT() { return getToken(KotlinParser.DOT, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeConstraintsContext typeConstraints() {
 			return getRuleContext(TypeConstraintsContext.class,0);
 		}
@@ -12978,7 +12978,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_anonymousFunction; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnonymousFunction(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAnonymousFunction(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -13162,7 +13162,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionLiteral; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionLiteral(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionLiteral(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -13204,17 +13204,17 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ObjectLiteralContext extends ParserRuleContext {
-		public TerminalNode OBJECT() { return getToken(MakiParser.OBJECT, 0); }
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode OBJECT() { return getToken(KotlinParser.OBJECT, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public DelegationSpecifiersContext delegationSpecifiers() {
 			return getRuleContext(DelegationSpecifiersContext.class,0);
 		}
 		public ClassBodyContext classBody() {
 			return getRuleContext(ClassBodyContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ObjectLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -13222,7 +13222,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_objectLiteral; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitObjectLiteral(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitObjectLiteral(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -13330,15 +13330,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ThisExpressionContext extends ParserRuleContext {
-		public TerminalNode THIS() { return getToken(MakiParser.THIS, 0); }
-		public TerminalNode THIS_AT() { return getToken(MakiParser.THIS_AT, 0); }
+		public TerminalNode THIS() { return getToken(KotlinParser.THIS, 0); }
+		public TerminalNode THIS_AT() { return getToken(KotlinParser.THIS_AT, 0); }
 		public ThisExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_thisExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitThisExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitThisExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -13374,28 +13374,28 @@ public class MakiParser extends Parser {
 	}
 
 	public static class SuperExpressionContext extends ParserRuleContext {
-		public TerminalNode SUPER() { return getToken(MakiParser.SUPER, 0); }
-		public TerminalNode LANGLE() { return getToken(MakiParser.LANGLE, 0); }
+		public TerminalNode SUPER() { return getToken(KotlinParser.SUPER, 0); }
+		public TerminalNode LANGLE() { return getToken(KotlinParser.LANGLE, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public TerminalNode RANGLE() { return getToken(MakiParser.RANGLE, 0); }
-		public TerminalNode AT_NO_WS() { return getToken(MakiParser.AT_NO_WS, 0); }
+		public TerminalNode RANGLE() { return getToken(KotlinParser.RANGLE, 0); }
+		public TerminalNode AT_NO_WS() { return getToken(KotlinParser.AT_NO_WS, 0); }
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode SUPER_AT() { return getToken(MakiParser.SUPER_AT, 0); }
+		public TerminalNode SUPER_AT() { return getToken(KotlinParser.SUPER_AT, 0); }
 		public SuperExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_superExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSuperExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSuperExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -13492,34 +13492,34 @@ public class MakiParser extends Parser {
 	}
 
 	public static class IfExpressionContext extends ParserRuleContext {
-		public TerminalNode IF() { return getToken(MakiParser.IF, 0); }
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode IF() { return getToken(KotlinParser.IF, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
 		public List<ControlStructureBodyContext> controlStructureBody() {
 			return getRuleContexts(ControlStructureBodyContext.class);
 		}
 		public ControlStructureBodyContext controlStructureBody(int i) {
 			return getRuleContext(ControlStructureBodyContext.class,i);
 		}
-		public List<TerminalNode> SEMICOLON() { return getTokens(MakiParser.SEMICOLON); }
+		public List<TerminalNode> SEMICOLON() { return getTokens(KotlinParser.SEMICOLON); }
 		public TerminalNode SEMICOLON(int i) {
-			return getToken(MakiParser.SEMICOLON, i);
+			return getToken(KotlinParser.SEMICOLON, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode ELSE() { return getToken(MakiParser.ELSE, 0); }
+		public TerminalNode ELSE() { return getToken(KotlinParser.ELSE, 0); }
 		public IfExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_ifExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIfExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitIfExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -13985,25 +13985,25 @@ public class MakiParser extends Parser {
 	}
 
 	public static class WhenSubjectContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
-		public TerminalNode VAL() { return getToken(MakiParser.VAL, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
+		public TerminalNode VAL() { return getToken(KotlinParser.VAL, 0); }
 		public VariableDeclarationContext variableDeclaration() {
 			return getRuleContext(VariableDeclarationContext.class,0);
 		}
-		public TerminalNode ASSIGNMENT() { return getToken(MakiParser.ASSIGNMENT, 0); }
+		public TerminalNode ASSIGNMENT() { return getToken(KotlinParser.ASSIGNMENT, 0); }
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
 		}
 		public AnnotationContext annotation(int i) {
 			return getRuleContext(AnnotationContext.class,i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public WhenSubjectContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -14011,7 +14011,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_whenSubject; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenSubject(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitWhenSubject(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -14132,12 +14132,12 @@ public class MakiParser extends Parser {
 	}
 
 	public static class WhenExpressionContext extends ParserRuleContext {
-		public TerminalNode WHEN() { return getToken(MakiParser.WHEN, 0); }
-		public TerminalNode LCURL() { return getToken(MakiParser.LCURL, 0); }
-		public TerminalNode RCURL() { return getToken(MakiParser.RCURL, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode WHEN() { return getToken(KotlinParser.WHEN, 0); }
+		public TerminalNode LCURL() { return getToken(KotlinParser.LCURL, 0); }
+		public TerminalNode RCURL() { return getToken(KotlinParser.RCURL, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public WhenSubjectContext whenSubject() {
 			return getRuleContext(WhenSubjectContext.class,0);
@@ -14154,7 +14154,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_whenExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitWhenExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -14295,29 +14295,29 @@ public class MakiParser extends Parser {
 		public WhenConditionContext whenCondition(int i) {
 			return getRuleContext(WhenConditionContext.class,i);
 		}
-		public TerminalNode ARROW() { return getToken(MakiParser.ARROW, 0); }
+		public TerminalNode ARROW() { return getToken(KotlinParser.ARROW, 0); }
 		public ControlStructureBodyContext controlStructureBody() {
 			return getRuleContext(ControlStructureBodyContext.class,0);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(MakiParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(KotlinParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(MakiParser.COMMA, i);
+			return getToken(KotlinParser.COMMA, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public SemiContext semi() {
 			return getRuleContext(SemiContext.class,0);
 		}
-		public TerminalNode ELSE() { return getToken(MakiParser.ELSE, 0); }
+		public TerminalNode ELSE() { return getToken(KotlinParser.ELSE, 0); }
 		public WhenEntryContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_whenEntry; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenEntry(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitWhenEntry(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -14626,7 +14626,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_whenCondition; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitWhenCondition(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitWhenCondition(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -14769,9 +14769,9 @@ public class MakiParser extends Parser {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public RangeTestContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -14779,7 +14779,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_rangeTest; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitRangeTest(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitRangeTest(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -14831,9 +14831,9 @@ public class MakiParser extends Parser {
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public TypeTestContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -14841,7 +14841,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeTest; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeTest(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeTest(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -14885,16 +14885,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class TryExpressionContext extends ParserRuleContext {
-		public TerminalNode TRY() { return getToken(MakiParser.TRY, 0); }
+		public TerminalNode TRY() { return getToken(KotlinParser.TRY, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
 		public FinallyBlockContext finallyBlock() {
 			return getRuleContext(FinallyBlockContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<CatchBlockContext> catchBlock() {
 			return getRuleContexts(CatchBlockContext.class);
@@ -14908,7 +14908,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_tryExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTryExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTryExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15039,22 +15039,22 @@ public class MakiParser extends Parser {
 	}
 
 	public static class CatchBlockContext extends ParserRuleContext {
-		public TerminalNode CATCH() { return getToken(MakiParser.CATCH, 0); }
-		public TerminalNode LPAREN() { return getToken(MakiParser.LPAREN, 0); }
+		public TerminalNode CATCH() { return getToken(KotlinParser.CATCH, 0); }
+		public TerminalNode LPAREN() { return getToken(KotlinParser.LPAREN, 0); }
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(MakiParser.RPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(KotlinParser.RPAREN, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
@@ -15062,14 +15062,14 @@ public class MakiParser extends Parser {
 		public AnnotationContext annotation(int i) {
 			return getRuleContext(AnnotationContext.class,i);
 		}
-		public TerminalNode COMMA() { return getToken(MakiParser.COMMA, 0); }
+		public TerminalNode COMMA() { return getToken(KotlinParser.COMMA, 0); }
 		public CatchBlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_catchBlock; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCatchBlock(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitCatchBlock(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15175,13 +15175,13 @@ public class MakiParser extends Parser {
 	}
 
 	public static class FinallyBlockContext extends ParserRuleContext {
-		public TerminalNode FINALLY() { return getToken(MakiParser.FINALLY, 0); }
+		public TerminalNode FINALLY() { return getToken(KotlinParser.FINALLY, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public FinallyBlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -15189,7 +15189,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_finallyBlock; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFinallyBlock(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFinallyBlock(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15233,27 +15233,27 @@ public class MakiParser extends Parser {
 	}
 
 	public static class JumpExpressionContext extends ParserRuleContext {
-		public TerminalNode THROW() { return getToken(MakiParser.THROW, 0); }
+		public TerminalNode THROW() { return getToken(KotlinParser.THROW, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode RETURN() { return getToken(MakiParser.RETURN, 0); }
-		public TerminalNode RETURN_AT() { return getToken(MakiParser.RETURN_AT, 0); }
-		public TerminalNode CONTINUE() { return getToken(MakiParser.CONTINUE, 0); }
-		public TerminalNode CONTINUE_AT() { return getToken(MakiParser.CONTINUE_AT, 0); }
-		public TerminalNode BREAK() { return getToken(MakiParser.BREAK, 0); }
-		public TerminalNode BREAK_AT() { return getToken(MakiParser.BREAK_AT, 0); }
+		public TerminalNode RETURN() { return getToken(KotlinParser.RETURN, 0); }
+		public TerminalNode RETURN_AT() { return getToken(KotlinParser.RETURN_AT, 0); }
+		public TerminalNode CONTINUE() { return getToken(KotlinParser.CONTINUE, 0); }
+		public TerminalNode CONTINUE_AT() { return getToken(KotlinParser.CONTINUE_AT, 0); }
+		public TerminalNode BREAK() { return getToken(KotlinParser.BREAK, 0); }
+		public TerminalNode BREAK_AT() { return getToken(KotlinParser.BREAK_AT, 0); }
 		public JumpExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_jumpExpression; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitJumpExpression(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitJumpExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15362,17 +15362,17 @@ public class MakiParser extends Parser {
 	}
 
 	public static class CallableReferenceContext extends ParserRuleContext {
-		public TerminalNode COLONCOLON() { return getToken(MakiParser.COLONCOLON, 0); }
+		public TerminalNode COLONCOLON() { return getToken(KotlinParser.COLONCOLON, 0); }
 		public SimpleIdentifierContext simpleIdentifier() {
 			return getRuleContext(SimpleIdentifierContext.class,0);
 		}
-		public TerminalNode CLASS() { return getToken(MakiParser.CLASS, 0); }
+		public TerminalNode CLASS() { return getToken(KotlinParser.CLASS, 0); }
 		public ReceiverTypeContext receiverType() {
 			return getRuleContext(ReceiverTypeContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public CallableReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -15380,7 +15380,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_callableReference; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitCallableReference(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitCallableReference(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15512,18 +15512,18 @@ public class MakiParser extends Parser {
 	}
 
 	public static class AssignmentAndOperatorContext extends ParserRuleContext {
-		public TerminalNode ADD_ASSIGNMENT() { return getToken(MakiParser.ADD_ASSIGNMENT, 0); }
-		public TerminalNode SUB_ASSIGNMENT() { return getToken(MakiParser.SUB_ASSIGNMENT, 0); }
-		public TerminalNode MULT_ASSIGNMENT() { return getToken(MakiParser.MULT_ASSIGNMENT, 0); }
-		public TerminalNode DIV_ASSIGNMENT() { return getToken(MakiParser.DIV_ASSIGNMENT, 0); }
-		public TerminalNode MOD_ASSIGNMENT() { return getToken(MakiParser.MOD_ASSIGNMENT, 0); }
+		public TerminalNode ADD_ASSIGNMENT() { return getToken(KotlinParser.ADD_ASSIGNMENT, 0); }
+		public TerminalNode SUB_ASSIGNMENT() { return getToken(KotlinParser.SUB_ASSIGNMENT, 0); }
+		public TerminalNode MULT_ASSIGNMENT() { return getToken(KotlinParser.MULT_ASSIGNMENT, 0); }
+		public TerminalNode DIV_ASSIGNMENT() { return getToken(KotlinParser.DIV_ASSIGNMENT, 0); }
+		public TerminalNode MOD_ASSIGNMENT() { return getToken(KotlinParser.MOD_ASSIGNMENT, 0); }
 		public AssignmentAndOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_assignmentAndOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAssignmentAndOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAssignmentAndOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15559,17 +15559,17 @@ public class MakiParser extends Parser {
 	}
 
 	public static class EqualityOperatorContext extends ParserRuleContext {
-		public TerminalNode EXCL_EQ() { return getToken(MakiParser.EXCL_EQ, 0); }
-		public TerminalNode EXCL_EQEQ() { return getToken(MakiParser.EXCL_EQEQ, 0); }
-		public TerminalNode EQEQ() { return getToken(MakiParser.EQEQ, 0); }
-		public TerminalNode EQEQEQ() { return getToken(MakiParser.EQEQEQ, 0); }
+		public TerminalNode EXCL_EQ() { return getToken(KotlinParser.EXCL_EQ, 0); }
+		public TerminalNode EXCL_EQEQ() { return getToken(KotlinParser.EXCL_EQEQ, 0); }
+		public TerminalNode EQEQ() { return getToken(KotlinParser.EQEQ, 0); }
+		public TerminalNode EQEQEQ() { return getToken(KotlinParser.EQEQEQ, 0); }
 		public EqualityOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_equalityOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitEqualityOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitEqualityOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15605,17 +15605,17 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ComparisonOperatorContext extends ParserRuleContext {
-		public TerminalNode LANGLE() { return getToken(MakiParser.LANGLE, 0); }
-		public TerminalNode RANGLE() { return getToken(MakiParser.RANGLE, 0); }
-		public TerminalNode LE() { return getToken(MakiParser.LE, 0); }
-		public TerminalNode GE() { return getToken(MakiParser.GE, 0); }
+		public TerminalNode LANGLE() { return getToken(KotlinParser.LANGLE, 0); }
+		public TerminalNode RANGLE() { return getToken(KotlinParser.RANGLE, 0); }
+		public TerminalNode LE() { return getToken(KotlinParser.LE, 0); }
+		public TerminalNode GE() { return getToken(KotlinParser.GE, 0); }
 		public ComparisonOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_comparisonOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitComparisonOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitComparisonOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15651,15 +15651,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class InOperatorContext extends ParserRuleContext {
-		public TerminalNode IN() { return getToken(MakiParser.IN, 0); }
-		public TerminalNode NOT_IN() { return getToken(MakiParser.NOT_IN, 0); }
+		public TerminalNode IN() { return getToken(KotlinParser.IN, 0); }
+		public TerminalNode NOT_IN() { return getToken(KotlinParser.NOT_IN, 0); }
 		public InOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_inOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitInOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15695,15 +15695,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class IsOperatorContext extends ParserRuleContext {
-		public TerminalNode IS() { return getToken(MakiParser.IS, 0); }
-		public TerminalNode NOT_IS() { return getToken(MakiParser.NOT_IS, 0); }
+		public TerminalNode IS() { return getToken(KotlinParser.IS, 0); }
+		public TerminalNode NOT_IS() { return getToken(KotlinParser.NOT_IS, 0); }
 		public IsOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_isOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIsOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitIsOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15739,15 +15739,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class AdditiveOperatorContext extends ParserRuleContext {
-		public TerminalNode ADD() { return getToken(MakiParser.ADD, 0); }
-		public TerminalNode SUB() { return getToken(MakiParser.SUB, 0); }
+		public TerminalNode ADD() { return getToken(KotlinParser.ADD, 0); }
+		public TerminalNode SUB() { return getToken(KotlinParser.SUB, 0); }
 		public AdditiveOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_additiveOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAdditiveOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAdditiveOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15783,16 +15783,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class MultiplicativeOperatorContext extends ParserRuleContext {
-		public TerminalNode MULT() { return getToken(MakiParser.MULT, 0); }
-		public TerminalNode DIV() { return getToken(MakiParser.DIV, 0); }
-		public TerminalNode MOD() { return getToken(MakiParser.MOD, 0); }
+		public TerminalNode MULT() { return getToken(KotlinParser.MULT, 0); }
+		public TerminalNode DIV() { return getToken(KotlinParser.DIV, 0); }
+		public TerminalNode MOD() { return getToken(KotlinParser.MOD, 0); }
 		public MultiplicativeOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiplicativeOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiplicativeOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMultiplicativeOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15828,15 +15828,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class AsOperatorContext extends ParserRuleContext {
-		public TerminalNode AS() { return getToken(MakiParser.AS, 0); }
-		public TerminalNode AS_SAFE() { return getToken(MakiParser.AS_SAFE, 0); }
+		public TerminalNode AS() { return getToken(KotlinParser.AS, 0); }
+		public TerminalNode AS_SAFE() { return getToken(KotlinParser.AS_SAFE, 0); }
 		public AsOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_asOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAsOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAsOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15872,10 +15872,10 @@ public class MakiParser extends Parser {
 	}
 
 	public static class PrefixUnaryOperatorContext extends ParserRuleContext {
-		public TerminalNode INCR() { return getToken(MakiParser.INCR, 0); }
-		public TerminalNode DECR() { return getToken(MakiParser.DECR, 0); }
-		public TerminalNode SUB() { return getToken(MakiParser.SUB, 0); }
-		public TerminalNode ADD() { return getToken(MakiParser.ADD, 0); }
+		public TerminalNode INCR() { return getToken(KotlinParser.INCR, 0); }
+		public TerminalNode DECR() { return getToken(KotlinParser.DECR, 0); }
+		public TerminalNode SUB() { return getToken(KotlinParser.SUB, 0); }
+		public TerminalNode ADD() { return getToken(KotlinParser.ADD, 0); }
 		public ExclContext excl() {
 			return getRuleContext(ExclContext.class,0);
 		}
@@ -15885,7 +15885,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_prefixUnaryOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPrefixUnaryOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPrefixUnaryOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -15949,9 +15949,9 @@ public class MakiParser extends Parser {
 	}
 
 	public static class PostfixUnaryOperatorContext extends ParserRuleContext {
-		public TerminalNode INCR() { return getToken(MakiParser.INCR, 0); }
-		public TerminalNode DECR() { return getToken(MakiParser.DECR, 0); }
-		public TerminalNode EXCL_NO_WS() { return getToken(MakiParser.EXCL_NO_WS, 0); }
+		public TerminalNode INCR() { return getToken(KotlinParser.INCR, 0); }
+		public TerminalNode DECR() { return getToken(KotlinParser.DECR, 0); }
+		public TerminalNode EXCL_NO_WS() { return getToken(KotlinParser.EXCL_NO_WS, 0); }
 		public ExclContext excl() {
 			return getRuleContext(ExclContext.class,0);
 		}
@@ -15961,7 +15961,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postfixUnaryOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPostfixUnaryOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPostfixUnaryOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16012,15 +16012,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ExclContext extends ParserRuleContext {
-		public TerminalNode EXCL_NO_WS() { return getToken(MakiParser.EXCL_NO_WS, 0); }
-		public TerminalNode EXCL_WS() { return getToken(MakiParser.EXCL_WS, 0); }
+		public TerminalNode EXCL_NO_WS() { return getToken(KotlinParser.EXCL_NO_WS, 0); }
+		public TerminalNode EXCL_WS() { return getToken(KotlinParser.EXCL_WS, 0); }
 		public ExclContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_excl; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitExcl(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitExcl(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16056,18 +16056,18 @@ public class MakiParser extends Parser {
 	}
 
 	public static class MemberAccessOperatorContext extends ParserRuleContext {
-		public TerminalNode DOT() { return getToken(MakiParser.DOT, 0); }
+		public TerminalNode DOT() { return getToken(KotlinParser.DOT, 0); }
 		public SafeNavContext safeNav() {
 			return getRuleContext(SafeNavContext.class,0);
 		}
-		public TerminalNode COLONCOLON() { return getToken(MakiParser.COLONCOLON, 0); }
+		public TerminalNode COLONCOLON() { return getToken(KotlinParser.COLONCOLON, 0); }
 		public MemberAccessOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_memberAccessOperator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMemberAccessOperator(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMemberAccessOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16116,15 +16116,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class SafeNavContext extends ParserRuleContext {
-		public TerminalNode QUEST_NO_WS() { return getToken(MakiParser.QUEST_NO_WS, 0); }
-		public TerminalNode DOT() { return getToken(MakiParser.DOT, 0); }
+		public TerminalNode QUEST_NO_WS() { return getToken(KotlinParser.QUEST_NO_WS, 0); }
+		public TerminalNode DOT() { return getToken(KotlinParser.DOT, 0); }
 		public SafeNavContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_safeNav; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSafeNav(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSafeNav(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16171,7 +16171,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_modifiers; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitModifiers(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitModifiers(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16275,7 +16275,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parameterModifiers; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameterModifiers(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParameterModifiers(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16362,9 +16362,9 @@ public class MakiParser extends Parser {
 		public PlatformModifierContext platformModifier() {
 			return getRuleContext(PlatformModifierContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public ModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -16372,7 +16372,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_modifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16498,7 +16498,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeModifiers; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeModifiers(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeModifiers(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16547,10 +16547,10 @@ public class MakiParser extends Parser {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class,0);
 		}
-		public TerminalNode SUSPEND() { return getToken(MakiParser.SUSPEND, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode SUSPEND() { return getToken(KotlinParser.SUSPEND, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public TypeModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -16558,7 +16558,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16616,18 +16616,18 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ClassModifierContext extends ParserRuleContext {
-		public TerminalNode ENUM() { return getToken(MakiParser.ENUM, 0); }
-		public TerminalNode SEALED() { return getToken(MakiParser.SEALED, 0); }
-		public TerminalNode ANNOTATION() { return getToken(MakiParser.ANNOTATION, 0); }
-		public TerminalNode DATA() { return getToken(MakiParser.DATA, 0); }
-		public TerminalNode INNER() { return getToken(MakiParser.INNER, 0); }
+		public TerminalNode ENUM() { return getToken(KotlinParser.ENUM, 0); }
+		public TerminalNode SEALED() { return getToken(KotlinParser.SEALED, 0); }
+		public TerminalNode ANNOTATION() { return getToken(KotlinParser.ANNOTATION, 0); }
+		public TerminalNode DATA() { return getToken(KotlinParser.DATA, 0); }
+		public TerminalNode INNER() { return getToken(KotlinParser.INNER, 0); }
 		public ClassModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitClassModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitClassModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16663,15 +16663,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class MemberModifierContext extends ParserRuleContext {
-		public TerminalNode OVERRIDE() { return getToken(MakiParser.OVERRIDE, 0); }
-		public TerminalNode LATEINIT() { return getToken(MakiParser.LATEINIT, 0); }
+		public TerminalNode OVERRIDE() { return getToken(KotlinParser.OVERRIDE, 0); }
+		public TerminalNode LATEINIT() { return getToken(KotlinParser.LATEINIT, 0); }
 		public MemberModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_memberModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMemberModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMemberModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16707,17 +16707,17 @@ public class MakiParser extends Parser {
 	}
 
 	public static class VisibilityModifierContext extends ParserRuleContext {
-		public TerminalNode PUBLIC() { return getToken(MakiParser.PUBLIC, 0); }
-		public TerminalNode PRIVATE() { return getToken(MakiParser.PRIVATE, 0); }
-		public TerminalNode INTERNAL() { return getToken(MakiParser.INTERNAL, 0); }
-		public TerminalNode PROTECTED() { return getToken(MakiParser.PROTECTED, 0); }
+		public TerminalNode PUBLIC() { return getToken(KotlinParser.PUBLIC, 0); }
+		public TerminalNode PRIVATE() { return getToken(KotlinParser.PRIVATE, 0); }
+		public TerminalNode INTERNAL() { return getToken(KotlinParser.INTERNAL, 0); }
+		public TerminalNode PROTECTED() { return getToken(KotlinParser.PROTECTED, 0); }
 		public VisibilityModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_visibilityModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitVisibilityModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitVisibilityModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16753,15 +16753,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class VarianceModifierContext extends ParserRuleContext {
-		public TerminalNode IN() { return getToken(MakiParser.IN, 0); }
-		public TerminalNode OUT() { return getToken(MakiParser.OUT, 0); }
+		public TerminalNode IN() { return getToken(KotlinParser.IN, 0); }
+		public TerminalNode OUT() { return getToken(KotlinParser.OUT, 0); }
 		public VarianceModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_varianceModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitVarianceModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitVarianceModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16809,7 +16809,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameterModifiers; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameterModifiers(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeParameterModifiers(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16858,9 +16858,9 @@ public class MakiParser extends Parser {
 		public ReificationModifierContext reificationModifier() {
 			return getRuleContext(ReificationModifierContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public VarianceModifierContext varianceModifier() {
 			return getRuleContext(VarianceModifierContext.class,0);
@@ -16874,7 +16874,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameterModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitTypeParameterModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitTypeParameterModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -16958,19 +16958,19 @@ public class MakiParser extends Parser {
 	}
 
 	public static class FunctionModifierContext extends ParserRuleContext {
-		public TerminalNode TAILREC() { return getToken(MakiParser.TAILREC, 0); }
-		public TerminalNode OPERATOR() { return getToken(MakiParser.OPERATOR, 0); }
-		public TerminalNode INFIX() { return getToken(MakiParser.INFIX, 0); }
-		public TerminalNode INLINE() { return getToken(MakiParser.INLINE, 0); }
-		public TerminalNode EXTERNAL() { return getToken(MakiParser.EXTERNAL, 0); }
-		public TerminalNode SUSPEND() { return getToken(MakiParser.SUSPEND, 0); }
+		public TerminalNode TAILREC() { return getToken(KotlinParser.TAILREC, 0); }
+		public TerminalNode OPERATOR() { return getToken(KotlinParser.OPERATOR, 0); }
+		public TerminalNode INFIX() { return getToken(KotlinParser.INFIX, 0); }
+		public TerminalNode INLINE() { return getToken(KotlinParser.INLINE, 0); }
+		public TerminalNode EXTERNAL() { return getToken(KotlinParser.EXTERNAL, 0); }
+		public TerminalNode SUSPEND() { return getToken(KotlinParser.SUSPEND, 0); }
 		public FunctionModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_functionModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitFunctionModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitFunctionModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17006,14 +17006,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class PropertyModifierContext extends ParserRuleContext {
-		public TerminalNode CONST() { return getToken(MakiParser.CONST, 0); }
+		public TerminalNode CONST() { return getToken(KotlinParser.CONST, 0); }
 		public PropertyModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_propertyModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPropertyModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPropertyModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17040,16 +17040,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class InheritanceModifierContext extends ParserRuleContext {
-		public TerminalNode ABSTRACT() { return getToken(MakiParser.ABSTRACT, 0); }
-		public TerminalNode FINAL() { return getToken(MakiParser.FINAL, 0); }
-		public TerminalNode OPEN() { return getToken(MakiParser.OPEN, 0); }
+		public TerminalNode ABSTRACT() { return getToken(KotlinParser.ABSTRACT, 0); }
+		public TerminalNode FINAL() { return getToken(KotlinParser.FINAL, 0); }
+		public TerminalNode OPEN() { return getToken(KotlinParser.OPEN, 0); }
 		public InheritanceModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_inheritanceModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitInheritanceModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitInheritanceModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17085,16 +17085,16 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ParameterModifierContext extends ParserRuleContext {
-		public TerminalNode VARARG() { return getToken(MakiParser.VARARG, 0); }
-		public TerminalNode NOINLINE() { return getToken(MakiParser.NOINLINE, 0); }
-		public TerminalNode CROSSINLINE() { return getToken(MakiParser.CROSSINLINE, 0); }
+		public TerminalNode VARARG() { return getToken(KotlinParser.VARARG, 0); }
+		public TerminalNode NOINLINE() { return getToken(KotlinParser.NOINLINE, 0); }
+		public TerminalNode CROSSINLINE() { return getToken(KotlinParser.CROSSINLINE, 0); }
 		public ParameterModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parameterModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitParameterModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitParameterModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17130,14 +17130,14 @@ public class MakiParser extends Parser {
 	}
 
 	public static class ReificationModifierContext extends ParserRuleContext {
-		public TerminalNode REIFIED() { return getToken(MakiParser.REIFIED, 0); }
+		public TerminalNode REIFIED() { return getToken(KotlinParser.REIFIED, 0); }
 		public ReificationModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_reificationModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitReificationModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitReificationModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17164,15 +17164,15 @@ public class MakiParser extends Parser {
 	}
 
 	public static class PlatformModifierContext extends ParserRuleContext {
-		public TerminalNode EXPECT() { return getToken(MakiParser.EXPECT, 0); }
-		public TerminalNode ACTUAL() { return getToken(MakiParser.ACTUAL, 0); }
+		public TerminalNode EXPECT() { return getToken(KotlinParser.EXPECT, 0); }
+		public TerminalNode ACTUAL() { return getToken(KotlinParser.ACTUAL, 0); }
 		public PlatformModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_platformModifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitPlatformModifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitPlatformModifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17214,9 +17214,9 @@ public class MakiParser extends Parser {
 		public MultiAnnotationContext multiAnnotation() {
 			return getRuleContext(MultiAnnotationContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AnnotationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -17224,7 +17224,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAnnotation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17288,19 +17288,19 @@ public class MakiParser extends Parser {
 		public UnescapedAnnotationContext unescapedAnnotation() {
 			return getRuleContext(UnescapedAnnotationContext.class,0);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
-		public TerminalNode AT_NO_WS() { return getToken(MakiParser.AT_NO_WS, 0); }
-		public TerminalNode AT_PRE_WS() { return getToken(MakiParser.AT_PRE_WS, 0); }
+		public TerminalNode AT_NO_WS() { return getToken(KotlinParser.AT_NO_WS, 0); }
+		public TerminalNode AT_PRE_WS() { return getToken(KotlinParser.AT_PRE_WS, 0); }
 		public SingleAnnotationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_singleAnnotation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSingleAnnotation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSingleAnnotation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17370,11 +17370,11 @@ public class MakiParser extends Parser {
 		public AnnotationUseSiteTargetContext annotationUseSiteTarget() {
 			return getRuleContext(AnnotationUseSiteTargetContext.class,0);
 		}
-		public TerminalNode LSQUARE() { return getToken(MakiParser.LSQUARE, 0); }
-		public TerminalNode RSQUARE() { return getToken(MakiParser.RSQUARE, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode LSQUARE() { return getToken(KotlinParser.LSQUARE, 0); }
+		public TerminalNode RSQUARE() { return getToken(KotlinParser.RSQUARE, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public List<UnescapedAnnotationContext> unescapedAnnotation() {
 			return getRuleContexts(UnescapedAnnotationContext.class);
@@ -17382,15 +17382,15 @@ public class MakiParser extends Parser {
 		public UnescapedAnnotationContext unescapedAnnotation(int i) {
 			return getRuleContext(UnescapedAnnotationContext.class,i);
 		}
-		public TerminalNode AT_NO_WS() { return getToken(MakiParser.AT_NO_WS, 0); }
-		public TerminalNode AT_PRE_WS() { return getToken(MakiParser.AT_PRE_WS, 0); }
+		public TerminalNode AT_NO_WS() { return getToken(KotlinParser.AT_NO_WS, 0); }
+		public TerminalNode AT_PRE_WS() { return getToken(KotlinParser.AT_PRE_WS, 0); }
 		public MultiAnnotationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiAnnotation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitMultiAnnotation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitMultiAnnotation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17489,20 +17489,20 @@ public class MakiParser extends Parser {
 	}
 
 	public static class AnnotationUseSiteTargetContext extends ParserRuleContext {
-		public TerminalNode COLON() { return getToken(MakiParser.COLON, 0); }
-		public TerminalNode AT_NO_WS() { return getToken(MakiParser.AT_NO_WS, 0); }
-		public TerminalNode AT_PRE_WS() { return getToken(MakiParser.AT_PRE_WS, 0); }
-		public TerminalNode FIELD() { return getToken(MakiParser.FIELD, 0); }
-		public TerminalNode PROPERTY() { return getToken(MakiParser.PROPERTY, 0); }
-		public TerminalNode GET() { return getToken(MakiParser.GET, 0); }
-		public TerminalNode SET() { return getToken(MakiParser.SET, 0); }
-		public TerminalNode RECEIVER() { return getToken(MakiParser.RECEIVER, 0); }
-		public TerminalNode PARAM() { return getToken(MakiParser.PARAM, 0); }
-		public TerminalNode SETPARAM() { return getToken(MakiParser.SETPARAM, 0); }
-		public TerminalNode DELEGATE() { return getToken(MakiParser.DELEGATE, 0); }
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public TerminalNode COLON() { return getToken(KotlinParser.COLON, 0); }
+		public TerminalNode AT_NO_WS() { return getToken(KotlinParser.AT_NO_WS, 0); }
+		public TerminalNode AT_PRE_WS() { return getToken(KotlinParser.AT_PRE_WS, 0); }
+		public TerminalNode FIELD() { return getToken(KotlinParser.FIELD, 0); }
+		public TerminalNode PROPERTY() { return getToken(KotlinParser.PROPERTY, 0); }
+		public TerminalNode GET() { return getToken(KotlinParser.GET, 0); }
+		public TerminalNode SET() { return getToken(KotlinParser.SET, 0); }
+		public TerminalNode RECEIVER() { return getToken(KotlinParser.RECEIVER, 0); }
+		public TerminalNode PARAM() { return getToken(KotlinParser.PARAM, 0); }
+		public TerminalNode SETPARAM() { return getToken(KotlinParser.SETPARAM, 0); }
+		public TerminalNode DELEGATE() { return getToken(KotlinParser.DELEGATE, 0); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public AnnotationUseSiteTargetContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -17510,7 +17510,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotationUseSiteTarget; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitAnnotationUseSiteTarget(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitAnnotationUseSiteTarget(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17584,7 +17584,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unescapedAnnotation; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitUnescapedAnnotation(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitUnescapedAnnotation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17624,60 +17624,60 @@ public class MakiParser extends Parser {
 	}
 
 	public static class SimpleIdentifierContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(MakiParser.Identifier, 0); }
-		public TerminalNode ABSTRACT() { return getToken(MakiParser.ABSTRACT, 0); }
-		public TerminalNode ANNOTATION() { return getToken(MakiParser.ANNOTATION, 0); }
-		public TerminalNode BY() { return getToken(MakiParser.BY, 0); }
-		public TerminalNode CATCH() { return getToken(MakiParser.CATCH, 0); }
-		public TerminalNode COMPANION() { return getToken(MakiParser.COMPANION, 0); }
-		public TerminalNode CONSTRUCTOR() { return getToken(MakiParser.CONSTRUCTOR, 0); }
-		public TerminalNode CROSSINLINE() { return getToken(MakiParser.CROSSINLINE, 0); }
-		public TerminalNode DATA() { return getToken(MakiParser.DATA, 0); }
-		public TerminalNode DYNAMIC() { return getToken(MakiParser.DYNAMIC, 0); }
-		public TerminalNode ENUM() { return getToken(MakiParser.ENUM, 0); }
-		public TerminalNode EXTERNAL() { return getToken(MakiParser.EXTERNAL, 0); }
-		public TerminalNode FINAL() { return getToken(MakiParser.FINAL, 0); }
-		public TerminalNode FINALLY() { return getToken(MakiParser.FINALLY, 0); }
-		public TerminalNode GET() { return getToken(MakiParser.GET, 0); }
-		public TerminalNode IMPORT() { return getToken(MakiParser.IMPORT, 0); }
-		public TerminalNode INFIX() { return getToken(MakiParser.INFIX, 0); }
-		public TerminalNode INIT() { return getToken(MakiParser.INIT, 0); }
-		public TerminalNode INLINE() { return getToken(MakiParser.INLINE, 0); }
-		public TerminalNode INNER() { return getToken(MakiParser.INNER, 0); }
-		public TerminalNode INTERNAL() { return getToken(MakiParser.INTERNAL, 0); }
-		public TerminalNode LATEINIT() { return getToken(MakiParser.LATEINIT, 0); }
-		public TerminalNode NOINLINE() { return getToken(MakiParser.NOINLINE, 0); }
-		public TerminalNode OPEN() { return getToken(MakiParser.OPEN, 0); }
-		public TerminalNode OPERATOR() { return getToken(MakiParser.OPERATOR, 0); }
-		public TerminalNode OUT() { return getToken(MakiParser.OUT, 0); }
-		public TerminalNode OVERRIDE() { return getToken(MakiParser.OVERRIDE, 0); }
-		public TerminalNode PRIVATE() { return getToken(MakiParser.PRIVATE, 0); }
-		public TerminalNode PROTECTED() { return getToken(MakiParser.PROTECTED, 0); }
-		public TerminalNode PUBLIC() { return getToken(MakiParser.PUBLIC, 0); }
-		public TerminalNode REIFIED() { return getToken(MakiParser.REIFIED, 0); }
-		public TerminalNode SEALED() { return getToken(MakiParser.SEALED, 0); }
-		public TerminalNode TAILREC() { return getToken(MakiParser.TAILREC, 0); }
-		public TerminalNode SET() { return getToken(MakiParser.SET, 0); }
-		public TerminalNode VARARG() { return getToken(MakiParser.VARARG, 0); }
-		public TerminalNode WHERE() { return getToken(MakiParser.WHERE, 0); }
-		public TerminalNode FIELD() { return getToken(MakiParser.FIELD, 0); }
-		public TerminalNode PROPERTY() { return getToken(MakiParser.PROPERTY, 0); }
-		public TerminalNode RECEIVER() { return getToken(MakiParser.RECEIVER, 0); }
-		public TerminalNode PARAM() { return getToken(MakiParser.PARAM, 0); }
-		public TerminalNode SETPARAM() { return getToken(MakiParser.SETPARAM, 0); }
-		public TerminalNode DELEGATE() { return getToken(MakiParser.DELEGATE, 0); }
-		public TerminalNode FILE() { return getToken(MakiParser.FILE, 0); }
-		public TerminalNode EXPECT() { return getToken(MakiParser.EXPECT, 0); }
-		public TerminalNode ACTUAL() { return getToken(MakiParser.ACTUAL, 0); }
-		public TerminalNode CONST() { return getToken(MakiParser.CONST, 0); }
-		public TerminalNode SUSPEND() { return getToken(MakiParser.SUSPEND, 0); }
+		public TerminalNode Identifier() { return getToken(KotlinParser.Identifier, 0); }
+		public TerminalNode ABSTRACT() { return getToken(KotlinParser.ABSTRACT, 0); }
+		public TerminalNode ANNOTATION() { return getToken(KotlinParser.ANNOTATION, 0); }
+		public TerminalNode BY() { return getToken(KotlinParser.BY, 0); }
+		public TerminalNode CATCH() { return getToken(KotlinParser.CATCH, 0); }
+		public TerminalNode COMPANION() { return getToken(KotlinParser.COMPANION, 0); }
+		public TerminalNode CONSTRUCTOR() { return getToken(KotlinParser.CONSTRUCTOR, 0); }
+		public TerminalNode CROSSINLINE() { return getToken(KotlinParser.CROSSINLINE, 0); }
+		public TerminalNode DATA() { return getToken(KotlinParser.DATA, 0); }
+		public TerminalNode DYNAMIC() { return getToken(KotlinParser.DYNAMIC, 0); }
+		public TerminalNode ENUM() { return getToken(KotlinParser.ENUM, 0); }
+		public TerminalNode EXTERNAL() { return getToken(KotlinParser.EXTERNAL, 0); }
+		public TerminalNode FINAL() { return getToken(KotlinParser.FINAL, 0); }
+		public TerminalNode FINALLY() { return getToken(KotlinParser.FINALLY, 0); }
+		public TerminalNode GET() { return getToken(KotlinParser.GET, 0); }
+		public TerminalNode IMPORT() { return getToken(KotlinParser.IMPORT, 0); }
+		public TerminalNode INFIX() { return getToken(KotlinParser.INFIX, 0); }
+		public TerminalNode INIT() { return getToken(KotlinParser.INIT, 0); }
+		public TerminalNode INLINE() { return getToken(KotlinParser.INLINE, 0); }
+		public TerminalNode INNER() { return getToken(KotlinParser.INNER, 0); }
+		public TerminalNode INTERNAL() { return getToken(KotlinParser.INTERNAL, 0); }
+		public TerminalNode LATEINIT() { return getToken(KotlinParser.LATEINIT, 0); }
+		public TerminalNode NOINLINE() { return getToken(KotlinParser.NOINLINE, 0); }
+		public TerminalNode OPEN() { return getToken(KotlinParser.OPEN, 0); }
+		public TerminalNode OPERATOR() { return getToken(KotlinParser.OPERATOR, 0); }
+		public TerminalNode OUT() { return getToken(KotlinParser.OUT, 0); }
+		public TerminalNode OVERRIDE() { return getToken(KotlinParser.OVERRIDE, 0); }
+		public TerminalNode PRIVATE() { return getToken(KotlinParser.PRIVATE, 0); }
+		public TerminalNode PROTECTED() { return getToken(KotlinParser.PROTECTED, 0); }
+		public TerminalNode PUBLIC() { return getToken(KotlinParser.PUBLIC, 0); }
+		public TerminalNode REIFIED() { return getToken(KotlinParser.REIFIED, 0); }
+		public TerminalNode SEALED() { return getToken(KotlinParser.SEALED, 0); }
+		public TerminalNode TAILREC() { return getToken(KotlinParser.TAILREC, 0); }
+		public TerminalNode SET() { return getToken(KotlinParser.SET, 0); }
+		public TerminalNode VARARG() { return getToken(KotlinParser.VARARG, 0); }
+		public TerminalNode WHERE() { return getToken(KotlinParser.WHERE, 0); }
+		public TerminalNode FIELD() { return getToken(KotlinParser.FIELD, 0); }
+		public TerminalNode PROPERTY() { return getToken(KotlinParser.PROPERTY, 0); }
+		public TerminalNode RECEIVER() { return getToken(KotlinParser.RECEIVER, 0); }
+		public TerminalNode PARAM() { return getToken(KotlinParser.PARAM, 0); }
+		public TerminalNode SETPARAM() { return getToken(KotlinParser.SETPARAM, 0); }
+		public TerminalNode DELEGATE() { return getToken(KotlinParser.DELEGATE, 0); }
+		public TerminalNode FILE() { return getToken(KotlinParser.FILE, 0); }
+		public TerminalNode EXPECT() { return getToken(KotlinParser.EXPECT, 0); }
+		public TerminalNode ACTUAL() { return getToken(KotlinParser.ACTUAL, 0); }
+		public TerminalNode CONST() { return getToken(KotlinParser.CONST, 0); }
+		public TerminalNode SUSPEND() { return getToken(KotlinParser.SUSPEND, 0); }
 		public SimpleIdentifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_simpleIdentifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitSimpleIdentifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitSimpleIdentifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -17719,13 +17719,13 @@ public class MakiParser extends Parser {
 		public SimpleIdentifierContext simpleIdentifier(int i) {
 			return getRuleContext(SimpleIdentifierContext.class,i);
 		}
-		public List<TerminalNode> DOT() { return getTokens(MakiParser.DOT); }
+		public List<TerminalNode> DOT() { return getTokens(KotlinParser.DOT); }
 		public TerminalNode DOT(int i) {
-			return getToken(MakiParser.DOT, i);
+			return getToken(KotlinParser.DOT, i);
 		}
-		public List<TerminalNode> NL() { return getTokens(MakiParser.NL); }
+		public List<TerminalNode> NL() { return getTokens(KotlinParser.NL); }
 		public TerminalNode NL(int i) {
-			return getToken(MakiParser.NL, i);
+			return getToken(KotlinParser.NL, i);
 		}
 		public IdentifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -17733,7 +17733,7 @@ public class MakiParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_identifier; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MakiParserVisitor ) return ((MakiParserVisitor<? extends T>)visitor).visitIdentifier(this);
+			if ( visitor instanceof KotlinParserVisitor ) return ((KotlinParserVisitor<? extends T>)visitor).visitIdentifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
