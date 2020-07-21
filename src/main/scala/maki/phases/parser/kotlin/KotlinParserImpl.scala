@@ -1,7 +1,6 @@
 package maki.phases.parser.kotlin
 
 import maki.kotlin.{KotlinLexer, KotlinParser}
-import maki.phases.parser.kotlin.ast.KtFile
 import org.antlr.v4.runtime.{CharStreams, CodePointCharStream, CommonTokenStream}
 
 object KotlinParserImpl {
@@ -18,9 +17,9 @@ object KotlinParserImpl {
       andThen parser
     )
 
-  def apply(source: String): KotlinParser = initParser(source)
+  def apply(source: String) = initParser(source)
 
-  def parse(source: String): KtFile = visitor(source).ast
+  def parse(source: String) = visitor(source).ast
 
-  def parseLisp(source: String): String = KotlinParserImpl(source).kotlinFile.toStringTree(KotlinParserImpl(source))
+  def parseLisp(source: String) = KotlinParserImpl(source).kotlinFile.toStringTree(KotlinParserImpl(source))
 }
