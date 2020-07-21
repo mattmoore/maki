@@ -19,7 +19,7 @@ class FunctionSpec extends AnyFunSpec with Matchers {
     }
 
     describe("function with parameters") {
-      val source = """fun hello() = "Hello ${name}""""
+      val source = """fun hello(name: String) = "Hello ${name}""""
 
       it("constructs an AST") {
         KotlinParser.parse(source).nodes(0) should have(
