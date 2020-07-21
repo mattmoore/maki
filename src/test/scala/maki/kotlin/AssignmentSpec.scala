@@ -1,6 +1,6 @@
 package maki.kotlin
 
-import maki.phases.parser.kotlin.KotlinParser
+import maki.phases.parser.kotlin.KotlinParserImpl
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
 
@@ -10,7 +10,7 @@ class AssignmentSpec extends AnyFunSpec with Matchers {
       val source = """val x = 5"""
 
       it("constructs an AST") {
-        KotlinParser.parse(source).nodes(0) should have(
+        KotlinParserImpl.parse(source).nodes(0) should have(
           Symbol("name")("x"),
           Symbol("expression")("5"),
           Symbol("dataType")("Int")
@@ -22,7 +22,7 @@ class AssignmentSpec extends AnyFunSpec with Matchers {
       val source = """val firstName = "Matt""""
 
       it("constructs an AST") {
-        KotlinParser.parse(source).nodes(0) should have(
+        KotlinParserImpl.parse(source).nodes(0) should have(
           Symbol("name")("firstName"),
           Symbol("expression")(""""Matt""""),
           Symbol("dataType")("String")
@@ -34,7 +34,7 @@ class AssignmentSpec extends AnyFunSpec with Matchers {
       val source = """val firstName = """""
 
       it("constructs an AST") {
-        KotlinParser.parse(source).nodes(0) should have(
+        KotlinParserImpl.parse(source).nodes(0) should have(
           Symbol("name")("firstName"),
           Symbol("expression")("\"\""),
           Symbol("dataType")("String")

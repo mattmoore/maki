@@ -1,7 +1,7 @@
 package maki
 
-import maki.phases.parser.kotlin.KotlinParser
+import maki.phases.parser.kotlin.KotlinParserImpl
 
 object Maki extends App {
-  println(KotlinParser.parseLisp(args(0)))
+  println(KotlinParserImpl.parseLisp(args(0)))
 }
