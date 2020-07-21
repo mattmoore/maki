@@ -4,7 +4,7 @@ import maki.phases.parser.kotlin.KotlinParser
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
 
-class KotlinParserSpec extends AnyFunSpec with Matchers {
+class AssignmentSpec extends AnyFunSpec with Matchers {
   describe("parse") {
     describe("when integer declaration") {
       val source = """val x = 5"""
