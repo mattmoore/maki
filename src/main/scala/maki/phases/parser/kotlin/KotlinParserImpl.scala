@@ -11,7 +11,12 @@ object KotlinParserImpl {
   private val parser = (tokenStream: CommonTokenStream) => new KotlinParser(tokenStream)
   private val visitor = (source: String) => KotlinVisitor(KotlinParserImpl(source).kotlinFile)
 
-  private def initParser = parser compose tokenStream compose lexer compose charStream
+  private def initParser = (
+    charStream
+      andThen lexer
+      andThen tokenStream
+      andThen parser
+    )
 
   def apply(source: String): KotlinParser = initParser(source)
 
