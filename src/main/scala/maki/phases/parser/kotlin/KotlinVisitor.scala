@@ -2,7 +2,7 @@ package maki.phases.parser.kotlin
 
 import maki.kotlin.{KotlinParser, KotlinParserBaseVisitor}
 import maki.phases.analysis.TypeResolver
-import maki.phases.parser.kotlin.ast.{ASTNode, KtFile, KtFunction, KtProperty}
+import maki.phases.parser.kotlin.ast.{ASTNode, KtFile, KtFunction, KtFunctionBody, KtProperty}
 import org.antlr.v4.runtime.tree.{ParseTree, ParseTreeProperty}
 
 object KotlinVisitor {
@@ -39,6 +39,10 @@ class KotlinVisitor extends KotlinParserBaseVisitor[Unit] {
   }
 
   override def visitFunctionBody(ctx: KotlinParser.FunctionBodyContext): Unit = {
-    super.visitFunctionBody(ctx)
+    val functionBody = new KtFunctionBody(
+      block = if (ctx.block != null) ctx.block.getText else "",
+      expression = if(ctx.expression != null) ctx.expression.getText else ""
+    )
+    values.put(ctx, functionBody)
   }
 }
