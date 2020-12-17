@@ -2,47 +2,53 @@ package maki.phases.parser.kotlin
 
 import maki.kotlin.{KotlinParser, KotlinParserBaseVisitor}
 import maki.phases.analysis.TypeResolver
-import maki.phases.parser.kotlin.ast.{ASTNode, KtFile, KtFunction, KtFunctionBody, KtProperty}
+import maki.phases.parser.kotlin.ast._
 import org.antlr.v4.runtime.tree.{ParseTree, ParseTreeProperty}
+
+import java.util.Optional
 
 object KotlinVisitor {
   def apply(tree: ParseTree): KotlinVisitor = {
-    val visitor = new KotlinVisitor()
-    visitor.visit(tree)
-    visitor
+    new KotlinVisitor {
+      visit(tree)
+    }
   }
 }
 
-class KotlinVisitor extends KotlinParserBaseVisitor[Unit] {
-  var ast: KtFile = new KtFile
+class KotlinVisitor extends KotlinParserBaseVisitor[ASTNode] {
+  var ast: AST = new AST
   var values = new ParseTreeProperty[ASTNode]
 
-  override def visitPropertyDeclaration(ctx: KotlinParser.PropertyDeclarationContext): Unit = {
+  override def visitPropertyDeclaration(ctx: KotlinParser.PropertyDeclarationContext): ASTNode = {
     val property = new KtProperty(
       name = ctx.variableDeclaration.getText,
       expression = ctx.expression.getText,
       dataType = TypeResolver.inferType(ctx.expression.getText)
     )
     values.put(ctx, property)
-    ast.nodes.addOne(property)
+    ast.children.addOne(property)
+    property
   }
 
-  override def visitFunctionDeclaration(ctx: KotlinParser.FunctionDeclarationContext): Unit = {
-    val function = new KtFunction(
+  override def visitFunctionDeclaration(ctx: KotlinParser.FunctionDeclarationContext): ASTNode = {
+    val function = KtFunction(
       name = ctx.simpleIdentifier.getText,
-      `type` = if (ctx.`type` != null) ctx.`type`.getText else "",
-      functionBody = ctx.functionBody.getText
+      `type` = Optional.ofNullable(ctx.`type`).map(_.getText).orElse(""),
+      functionBody = null
     )
-    ast.nodes.addOne(function)
     values.put(ctx, function)
-    this.visitFunctionBody(ctx.functionBody)
+    visitFunctionBody(ctx.functionBody)
+    ast.children.addOne(values.get(ctx))
+    values.get(ctx)
   }
 
-  override def visitFunctionBody(ctx: KotlinParser.FunctionBodyContext): Unit = {
-    val functionBody = new KtFunctionBody(
-      block = if (ctx.block != null) ctx.block.getText else "",
-      expression = if(ctx.expression != null) ctx.expression.getText else ""
+  override def visitFunctionBody(ctx: KotlinParser.FunctionBodyContext): ASTNode = {
+    val functionBody = KtFunctionBody(
+      block = Optional.ofNullable(ctx.block).map(_.getText).orElse(""),
+      expression = Optional.ofNullable(ctx.expression).map(_.getText).orElse("")
     )
-    values.put(ctx, functionBody)
+    val function: KtFunction = values.get(ctx.parent).asInstanceOf[KtFunction]
+    values.put(ctx.parent, function.copy(functionBody = functionBody))
+    functionBody
   }
 }

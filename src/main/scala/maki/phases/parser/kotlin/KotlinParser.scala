@@ -3,7 +3,7 @@ package maki.phases.parser.kotlin
 import maki.kotlin.{KotlinLexer, KotlinParser}
 import org.antlr.v4.runtime.{CharStreams, CodePointCharStream, CommonTokenStream}
 
-object KotlinParserImpl {
+object KotlinParser {
   private val charStream =
     (source: String) => CharStreams.fromString(source)
 
@@ -17,7 +17,7 @@ object KotlinParserImpl {
     (tokenStream: CommonTokenStream) => new KotlinParser(tokenStream)
 
   private val visitor =
-    (source: String) => KotlinVisitor(KotlinParserImpl(source).kotlinFile)
+    (source: String) => KotlinVisitor(KotlinParser(source).kotlinFile)
 
   def apply(source: String) = (
     charStream
@@ -30,7 +30,7 @@ object KotlinParserImpl {
     visitor(source).ast
 
   def parseLisp(source: String) =
-    KotlinParserImpl(source)
+    KotlinParser(source)
       .kotlinFile
-      .toStringTree(KotlinParserImpl(source))
+      .toStringTree(KotlinParser(source))
 }

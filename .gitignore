@@ -1,3 +1,5 @@
 target
 .idea
 gen
+.DS_Store
+.bsp
