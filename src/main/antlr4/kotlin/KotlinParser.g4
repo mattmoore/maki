@@ -1,3 +1,7 @@
+/**
+ * Kotlin syntax grammar in ANTLR4 notation
+ */
+
 parser grammar KotlinParser;
 
 options { tokenVocab = KotlinLexer; }

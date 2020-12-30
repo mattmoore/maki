@@ -1,5 +1,5 @@
-// Generated from /Users/mattmoore/source/maki/src/main/antlr4/kotlin/KotlinParser.g4 by ANTLR 4.8
-package maki.kotlin;
+// Generated from /Users/mattmoore/source/maki/src/main/antlr4/kotlin/KotlinParser.g4 by ANTLR 4.9
+package maki.languages.antlr.kotlin;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**

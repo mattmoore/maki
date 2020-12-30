@@ -1,10 +1,10 @@
-# MAKI
+# Maki Compiler
 
-**Meta-Advanced Kotlin Implementation - _An alternative Kotlin compiler and runtime with advanced metaprogramming capabilities._**
+Maki is a research project to build a compiler that supports multiple languages. The first two languages under development will be Kotlin and Scala.
 
 ## Setup
 
-You'll need SBT 1.3.10.
+You'll need `sbt 1.3.10`.
 
 To run the tests:
 
@@ -21,66 +21,36 @@ java -jar target/scala-2.13/maki-assembly-0.1.0-SNAPSHOT.jar "val x = 5"
 
 ## Why?
 
-Functional programming and metaprogramming. I really like the Kotlin language. Compared to languages like Ruby, however, Kotlin's metaprogramming capabilities are fairly limited.
+Having tinkered with a few compilers, I've noticed that many compilers can be difficult to work with and integrate with (compiler plugins, easy access to internals).
 
-There are three main goals for my implementation:
+The first goal of this compiler is to provide a multi-lingual and multi-target compiler that provides easy integration with its internals via a first-class API.
 
-1. Better FP support than what exists baked-in to Kotlin currently.
-1. A first-class metaprogramming model for use during compilation. There is another project, Arrow-Meta, which does a similar thing. However, the third goal...
-1. ...is more advanced metaprogramming capabilities baked into a new runtime library.
+The second major goal is to make integration of new language grammars as easy as possible:
 
-## Language Spec
+1. Define a language grammar via ANTLR.
+1. Define a parse tree.
+1. Define a translation between the parse tree and Maki's built-in abstract syntax tree. From there Maki will do the rest.
 
-To start, I'm implementing the current [Kotlin language spec](https://github.com/Kotlin/kotlin-spec). I plan to start modifying this spec, however, with some neat features I really like in langauges like Scala and Haskell.
+## Supported Languages
 
-As I continue with designing the language, I'll form my own language spec as well. The idea being that the language spec can be implemented in other compilers as well! Stay tuned for more info on that.
+To start, I'm implementing the current [Kotlin language spec](https://github.com/Kotlin/kotlin-spec). Next on the docket will be Scala. From there, I'll see what catches my fancy.
 
 ## Meta Features
 
 ### Compiler
 
-Note: The compiler features are pretty useful in their own right, but be sure to read through the runtime features as those are really where MAKI shines!
+Note: The compiler features are pretty useful in their own right, but be sure to read through the runtime features as those are really where Maki shines!
 
-#### Meta-Reflective API
+#### APIs
 
-MAKI exposes the parsing system via an API, so the Abstract Syntax Tree (AST) can be accessed and modified when the parser runs. There are some additional features the API will provide:
+The compiler is structured into phases, and all phases are exposed via a first-class API. This means that all tree structures can be accessed and modified at compile-time via plugins.
 
-1. AST Rendering: The parser can render the AST to an image file for easy visual inspection of the program logic. This will help unravel the mystery of how the compiler is interpreting the source.
-1. Comparative Inspection: MAKI provides the ability to specify two different Kotlin source versions and diff them. You can either render the diff as a picture, or dump it as a diff file. This is a useful tool for discovering what the compiler is doing with your source, and help trace down bugs or improve performance.
-1. Code Generation API: See what the final machine code will look like. You can feed either Kotlin source to the API to get the machine code directly, or you can feed an AST dump to it.
+#### Multiple Targets
 
-#### Macro System
-
-MAKI contains a macro system that can rewrite source at compile time.
-
-### Runtime Features
-
-#### Meta-Adaptive Runtime
-
-Most programming languages allow you to write your code, compile and execute. Simple enough! MAKI does the same thing but with a twist.
-
-##### Traditional Compilers Lose Data
-
-During the compilation of your program, lots of meta information is lost when generating the binary. While traditional compilers provide a way to go from Kotlin source code to a binary, MAKI provides the ability to go from a binary back to the original Kotlin source code.
-
-The official Kotlin/Java environments provide reflection APIs, but they require the engineer to explicitly program out meta functionality. MAKI provides these capabilities out of the box and for every binary it produces. This means that all the engineer has to do is write their code the way they normally would, and MAKI generates a built-in meta model providing reflection capabilities.
-
-##### The MAKI Runtime Preserves Meta Information From The Compiler
-
-The runtime provides an in-memory AST that can be queried and modified while the program is running. Whenever modifications are made to the runtime AST, the corresponding machine code is updated in-memory, without the need for the program to be recompiled or restarted.
-
-##### Meta Information/Capabilities Requires MAKI-Compiled Binaries
-
-Of course, the ability to go from a binary back to source is only possible with a binary compiled with MAKI. This is because the official Kotlin compilers, like most compilers, do not maintain enough meta data to reconstruct the original source.
-
-I may plan future research to determine if it's possible to have MAKI produce Kotlin source via inference, so that binaries produced by the official compilers can be converted back to Kotlin source. However, it's important to understand that inference would only produce an approximation of what the Kotlin source might have looked like. This is far less useful and is a "maybe" feature at this time.
-
-##### MAKI Provides Runtime "Monkey-Patching"
-
-MAKI will not only provide the ability to "decompile" code back to source from a binary file, but will actually have the ability to dump the AST and subsequent generated Kotlin source from a running program compiled with MAKI. This will be possible without requiring the MAKI compiler to be installed as the meta-capabilities of MAKI are built into every binary it produces.
-
-Since the AST is accessible at runtime, it becomes possible to take snapshots of the runtime AST at any point in time. This is useful if you want to track the changes to the program while it runs. Effectively, you can save the state of the program at any point in time and reload that same state.
+The compiler supports building native targets via LLVM as well as JVM bytecode.
 
 ## Contributing
 
 This project is open-source and contributions are more than welcome! Feel free to open a pull request! You can also reach out to me at matt@mattmoore.io if you have any questions or want to know how to get started.
+
+Check out the [compiler docs](docs/README.md)&mdash;a good place to get started if you want to contribute to the compiler itself.
