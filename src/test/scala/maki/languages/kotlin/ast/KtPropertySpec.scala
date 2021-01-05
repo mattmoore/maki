@@ -1,6 +1,5 @@
 package maki.languages.kotlin.ast
 
-import maki.AST
 import maki.languages.kotlin.Parser
 import maki.phases.Parsing
 import org.scalatest.funspec.AnyFunSpec
@@ -28,6 +27,6 @@ class KtPropertySpec extends AnyFunSpec with Matchers {
     }
   }
 
-  private def node(ast: AST): AST =
-    ast.children.head.children.head.children.head
+  private def node(ast: AST): KtProperty =
+    ast.asInstanceOf[KotlinFile].topLevelObjects.head.declaration.propertyDeclaration
 }

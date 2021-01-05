@@ -1,21 +1,19 @@
 package maki.phases
 
-import maki.AST
 import maki.languages.antlr.kotlin.KotlinParser.PropertyDeclarationContext
 import maki.languages.kotlin.ast.{KtFunction, KtProperty}
 
 object TypeInference extends Phase {
-  def apply(ast: AST): AST =
-    ast match {
-      case property: KtProperty => inferPropertyType(property)
-      case function: KtFunction => inferFunctionType(function)
-      case _ => ast
-    }
+  def apply(property: KtProperty): KtProperty =
+    inferPropertyType(property)
+
+  def apply(function: KtFunction): KtFunction =
+    inferFunctionType(function)
 
   private def inferPropertyType(ktProperty: KtProperty): KtProperty = {
     val IntPattern = "\\d+".r
     val StringPattern = """^".*"$""".r
-    val inferredType = ktProperty.parserRuleContext.asInstanceOf[PropertyDeclarationContext].expression.getText match {
+    val inferredType = ktProperty.context.asInstanceOf[PropertyDeclarationContext].expression.getText match {
       case IntPattern() => "Int"
       case StringPattern() => "String"
     }
@@ -25,7 +23,7 @@ object TypeInference extends Phase {
   private def inferFunctionType(ktFunction: KtFunction): KtFunction = {
     val IntPattern = "\\d+".r
     val StringPattern = """^".*"$""".r
-    val inferredType = ktFunction.parserRuleContext.asInstanceOf[PropertyDeclarationContext].expression.getText match {
+    val inferredType = ktFunction.context.asInstanceOf[PropertyDeclarationContext].expression.getText match {
       case IntPattern() => "Int"
       case StringPattern() => "String"
     }

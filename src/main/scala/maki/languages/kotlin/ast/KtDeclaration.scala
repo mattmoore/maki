@@ -1,5 +1,6 @@
 package maki.languages.kotlin.ast
 
-import maki.AST
-
-case class KtDeclaration() extends AST
+case class KtDeclaration(
+  var propertyDeclaration: KtProperty = null,
+  var functionDeclaration: KtFunction = null,
+) extends AST

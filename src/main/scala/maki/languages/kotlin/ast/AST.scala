@@ -1,4 +1,4 @@
-package maki
+package maki.languages.kotlin.ast
 
 import org.antlr.v4.runtime.ParserRuleContext
 
@@ -13,5 +13,5 @@ trait AST {
 
   var children: ListBuffer[AST] = ListBuffer.empty
 
-  var parserRuleContext: ParserRuleContext = null
+  var context: ParserRuleContext = null
 }

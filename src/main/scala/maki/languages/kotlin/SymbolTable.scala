@@ -1,6 +1,6 @@
 package maki.languages.kotlin
 
-import maki.AST
+import maki.languages.kotlin.ast.AST
 import org.antlr.v4.runtime.ParserRuleContext
 import org.antlr.v4.runtime.tree.ParseTreeProperty
 
