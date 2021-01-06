@@ -11,15 +11,16 @@ class Visitor extends KotlinParserBaseVisitor[AST] {
   override def visitKotlinFile(ctx: KotlinParser.KotlinFileContext): AST =
     new KotlinFile {
       context = ctx
-      topLevelObjects =
-        ctx.topLevelObject.toVector.map { topLevelObject =>
-          val tlo = visitTopLevelObject(topLevelObject)
-          tlo.parent = this
-          tlo
-        }
+      topLevelObjects = ctx.topLevelObject.toVector.map { topLevelObject =>
+        val tlo = visitTopLevelObject(topLevelObject)
+        tlo.parent = this
+        tlo
+      }
     }
 
-  override def visitTopLevelObject(ctx: KotlinParser.TopLevelObjectContext): KtTopLevelObject =
+  override def visitTopLevelObject(
+    ctx: KotlinParser.TopLevelObjectContext
+  ): KtTopLevelObject =
     new KtTopLevelObject(
       declaration = visitDeclaration(ctx.declaration)
     ) {
@@ -27,33 +28,44 @@ class Visitor extends KotlinParserBaseVisitor[AST] {
       declaration.parent = this
     }
 
-  override def visitDeclaration(ctx: KotlinParser.DeclarationContext): KtDeclaration =
+  override def visitDeclaration(
+    ctx: KotlinParser.DeclarationContext
+  ): KtDeclaration =
     new KtDeclaration {
       context = ctx
-      propertyDeclaration = if (ctx.propertyDeclaration == null) null else {
-        val property = visitPropertyDeclaration(ctx.propertyDeclaration)
-        property.parent = this
-        property
-      }
-      functionDeclaration = if (ctx.functionDeclaration == null) null else {
-        val function = visitFunctionDeclaration(ctx.functionDeclaration)
-        function.parent = this
-        function
-      }
+      propertyDeclaration =
+        if (ctx.propertyDeclaration == null) null
+        else {
+          val property = visitPropertyDeclaration(ctx.propertyDeclaration)
+          property.parent = this
+          property
+        }
+      functionDeclaration =
+        if (ctx.functionDeclaration == null) null
+        else {
+          val function = visitFunctionDeclaration(ctx.functionDeclaration)
+          function.parent = this
+          function
+        }
     }
 
-  override def visitPropertyDeclaration(ctx: KotlinParser.PropertyDeclarationContext): KtProperty =
+  override def visitPropertyDeclaration(
+    ctx: KotlinParser.PropertyDeclarationContext
+  ): KtProperty =
     TypeInference(
       new KtProperty(
         name = ctx.variableDeclaration.simpleIdentifier.getText,
         expression = ctx.expression.getText,
-        dataType = Option(ctx.variableDeclaration.`type`).map(_.getText).getOrElse(null)
+        dataType =
+          Option(ctx.variableDeclaration.`type`).map(_.getText).getOrElse(null)
       ) {
         context = ctx
       }
     )
 
-  override def visitFunctionDeclaration(ctx: KotlinParser.FunctionDeclarationContext): KtFunction =
+  override def visitFunctionDeclaration(
+    ctx: KotlinParser.FunctionDeclarationContext
+  ): KtFunction =
     new KtFunction(
       name = ctx.simpleIdentifier.getText,
       `type` = Optional.ofNullable(ctx.`type`).map(_.getText).orElse(""),
@@ -62,7 +74,9 @@ class Visitor extends KotlinParserBaseVisitor[AST] {
       context = ctx
     }
 
-  override def visitFunctionBody(ctx: KotlinParser.FunctionBodyContext): KtFunctionBody =
+  override def visitFunctionBody(
+    ctx: KotlinParser.FunctionBodyContext
+  ): KtFunctionBody =
     new KtFunctionBody(
       block = null,
       expression = visitExpression(ctx.expression)
@@ -70,7 +84,9 @@ class Visitor extends KotlinParserBaseVisitor[AST] {
       context = ctx
     }
 
-  override def visitExpression(ctx: KotlinParser.ExpressionContext): KtExpression =
+  override def visitExpression(
+    ctx: KotlinParser.ExpressionContext
+  ): KtExpression =
     new KtExpression {
       context = ctx
     }

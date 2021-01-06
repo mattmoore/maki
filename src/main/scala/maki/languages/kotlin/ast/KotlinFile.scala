@@ -1,5 +1,5 @@
 package maki.languages.kotlin.ast
 
 case class KotlinFile(
-  var topLevelObjects: Vector[KtTopLevelObject] = Vector.empty
+    var topLevelObjects: Vector[KtTopLevelObject] = Vector.empty
 ) extends AST
