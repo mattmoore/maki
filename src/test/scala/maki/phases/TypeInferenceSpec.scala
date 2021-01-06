@@ -1,6 +1,6 @@
 package maki.phases
 
-import maki.languages.kotlin.ast.{AST, KtProperty}
+import maki.languages.kotlin.ast.{ASTNode, KtProperty}
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
 
@@ -12,6 +12,6 @@ class TypeInferenceSpec extends AnyFunSpec with Matchers {
     }
   }
 
-  private def node(ast: AST): AST =
+  private def node(ast: ASTNode): ASTNode =
     ast.children.head.children.head.children.head
 }

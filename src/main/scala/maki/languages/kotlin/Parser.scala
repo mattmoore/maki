@@ -1,11 +1,11 @@
 package maki.languages.kotlin
 
 import maki.languages.antlr.kotlin.{KotlinLexer, KotlinParser}
-import maki.languages.kotlin.ast.AST
+import maki.languages.kotlin.ast.ASTNode
 import org.antlr.v4.runtime.{CharStreams, CodePointCharStream, CommonTokenStream}
 
 object Parser {
-  def apply(source: String): AST = {
+  def apply(source: String): ASTNode = {
     val lexer = new KotlinLexer(CharStreams.fromString(source))
     val parser = new KotlinParser(new CommonTokenStream(lexer))
     val parseTree = parser.kotlinFile

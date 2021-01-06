@@ -1,14 +1,14 @@
 package maki.languages.kotlin
 
 import maki.languages.antlr.kotlin.{KotlinParser, KotlinParserBaseVisitor}
-import maki.languages.kotlin.ast.{AST, _}
+import maki.languages.kotlin.ast.{ASTNode, _}
 import maki.phases.TypeInference
 
 import java.util.Optional
 import scala.collection.convert.ImplicitConversions.`collection AsScalaIterable`
 
-class Visitor extends KotlinParserBaseVisitor[AST] {
-  override def visitKotlinFile(ctx: KotlinParser.KotlinFileContext): AST =
+class Visitor extends KotlinParserBaseVisitor[ASTNode] {
+  override def visitKotlinFile(ctx: KotlinParser.KotlinFileContext): ASTNode =
     new KotlinFile {
       context = ctx
       topLevelObjects = ctx.topLevelObject.toVector.map { topLevelObject =>
@@ -119,9 +119,9 @@ class Visitor extends KotlinParserBaseVisitor[AST] {
       context = ctx
     }
 
-  override def visitBlock(ctx: KotlinParser.BlockContext): AST =
+  override def visitBlock(ctx: KotlinParser.BlockContext): ASTNode =
     super.visitBlock(ctx)
 
-  override def visitStatement(ctx: KotlinParser.StatementContext): AST =
+  override def visitStatement(ctx: KotlinParser.StatementContext): ASTNode =
     super.visitStatement(ctx)
 }

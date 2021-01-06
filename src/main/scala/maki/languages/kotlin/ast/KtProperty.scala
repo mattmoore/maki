@@ -4,5 +4,5 @@ case class KtProperty(
   var name: String,
   var expression: String,
   var dataType: String
-) extends AST {
+) extends ASTNode {
 }

@@ -27,6 +27,6 @@ class KtPropertySpec extends AnyFunSpec with Matchers {
     }
   }
 
-  private def node(ast: AST): KtProperty =
+  private def node(ast: ASTNode): KtProperty =
     ast.asInstanceOf[KotlinFile].topLevelObjects.head.declaration.propertyDeclaration
 }

@@ -6,7 +6,7 @@ import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
 
 class KtFunctionSpec extends AnyFunSpec with Matchers {
-  private def node(ast: AST): KtFunction =
+  private def node(ast: ASTNode): KtFunction =
     ast.asInstanceOf[KotlinFile].topLevelObjects.head.declaration.functionDeclaration
 
   describe("parse") {

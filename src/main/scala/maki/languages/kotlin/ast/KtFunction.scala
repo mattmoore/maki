@@ -4,4 +4,4 @@ case class KtFunction(
   var name: String,
   var `type`: String,
   var functionBody: KtFunctionBody
-) extends AST
+) extends ASTNode
