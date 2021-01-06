@@ -6,16 +6,21 @@ import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
 
 class KtFunctionSpec extends AnyFunSpec with Matchers {
+  private def node(ast: AST): KtFunction =
+    ast.asInstanceOf[KotlinFile].topLevelObjects.head.declaration.functionDeclaration
+
   describe("parse") {
     describe("expression function without parameters") {
       val source = """fun hello(): String = "Hello Maki!""""
       val ast = Parsing(source)
 
-      it("constructs an AST") {
+      it("parses a KtFunction") {
         node(ast) shouldBe KtFunction(
           name = "hello",
           `type` = "String",
-          functionBody = KtFunctionBody(null, KtExpression())
+          functionBody = KtFunctionBody(
+            expression = KtExpression(KtDisjunction(Vector(KtConjunction(Vector(KtEquality())))))
+          )
         )
       }
     }
@@ -24,27 +29,16 @@ class KtFunctionSpec extends AnyFunSpec with Matchers {
       val source = """fun hello(name: String): String = "Hello ${name}""""
       val ast = node(Parser(source))
 
-      it("constructs an AST") {
+      it("parses a KtFunction") {
         ast shouldBe KtFunction(
           name = "hello",
           `type` = "String",
-          functionBody = KtFunctionBody(null, KtExpression())
+          functionBody = KtFunctionBody(
+            expression = KtExpression(KtDisjunction(Vector(KtConjunction(Vector(KtEquality())))))
+          )
         )
       }
     }
-
-    //    describe("expression function with parameter and return type") {
-    //      val source = """fun hello(name: String): String = "Hello ${name}""""
-    //
-    //      it("constructs an AST") {
-    //        val ast = Parser(source)
-    //        ast.children.head should have(
-    //          Symbol("name")("hello"),
-    //          Symbol("type")("String"),
-    ////          Symbol("functionBody")(KtFunctionBody("", """"Hello ${name}""""))
-    //        )
-    //      }
-    //    }
 
     //    describe("block body function with no params and assignment in body") {
     //      val source =
@@ -69,7 +63,4 @@ class KtFunctionSpec extends AnyFunSpec with Matchers {
     //      }
     //    }
   }
-
-  private def node(ast: AST): KtFunction =
-    ast.asInstanceOf[KotlinFile].topLevelObjects.head.declaration.functionDeclaration
 }

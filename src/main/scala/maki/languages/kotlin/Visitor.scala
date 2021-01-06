@@ -82,12 +82,40 @@ class Visitor extends KotlinParserBaseVisitor[AST] {
       expression = visitExpression(ctx.expression)
     ) {
       context = ctx
+      expression.parent = this
     }
 
   override def visitExpression(
     ctx: KotlinParser.ExpressionContext
   ): KtExpression =
     new KtExpression {
+      context = ctx
+      disjunction = visitDisjunction(ctx.disjunction)
+      disjunction.parent = this
+    }
+
+  override def visitDisjunction(ctx: KotlinParser.DisjunctionContext): KtDisjunction =
+    new KtDisjunction {
+      context = ctx
+      conjunctions = ctx.conjunction.map { conjunctionContext =>
+        val conjunction = visitConjunction(conjunctionContext)
+        conjunction.parent = this
+        conjunction
+      }.toVector
+    }
+
+  override def visitConjunction(ctx: KotlinParser.ConjunctionContext): KtConjunction =
+    new KtConjunction {
+      context = ctx
+      equalities = ctx.equality.map { item =>
+        val equality = visitEquality(item)
+        equality.parent = this
+        equality
+      }.toVector
+    }
+
+  override def visitEquality(ctx: KotlinParser.EqualityContext): KtEquality =
+    new KtEquality() {
       context = ctx
     }
 

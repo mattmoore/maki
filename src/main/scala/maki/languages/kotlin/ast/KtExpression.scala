@@ -1,3 +1,5 @@
 package maki.languages.kotlin.ast
 
-case class KtExpression() extends AST
+case class KtExpression(
+  var disjunction: KtDisjunction = null
+) extends AST
