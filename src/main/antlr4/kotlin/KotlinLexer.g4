@@ -1,3 +1,7 @@
+/**
+ * Kotlin lexical grammar in ANTLR4 notation
+ */
+
 lexer grammar KotlinLexer;
 
 import UnicodeClasses;

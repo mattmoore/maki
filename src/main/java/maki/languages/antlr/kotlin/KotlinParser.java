@@ -1,5 +1,5 @@
-// Generated from /Users/mattmoore/source/maki/src/main/antlr4/kotlin/KotlinParser.g4 by ANTLR 4.8
-package maki.kotlin;
+// Generated from /Users/mattmoore/source/maki/src/main/antlr4/kotlin/KotlinParser.g4 by ANTLR 4.9
+package maki.languages.antlr.kotlin;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class KotlinParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.9", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
