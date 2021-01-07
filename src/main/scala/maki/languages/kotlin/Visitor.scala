@@ -5,13 +5,13 @@ import maki.languages.kotlin.ast.{ASTNode, _}
 import maki.phases.TypeInference
 
 import java.util.Optional
-import scala.collection.convert.ImplicitConversions.`collection AsScalaIterable`
+import scala.jdk.CollectionConverters._
 
 class Visitor extends KotlinParserBaseVisitor[ASTNode] {
   override def visitKotlinFile(ctx: KotlinParser.KotlinFileContext): ASTNode =
     new KotlinFile {
       context = ctx
-      topLevelObjects = ctx.topLevelObject.toVector.map { topLevelObject =>
+      topLevelObjects = ctx.topLevelObject.asScala.toVector.map { topLevelObject =>
         val tlo = visitTopLevelObject(topLevelObject)
         tlo.parent = this
         tlo
@@ -97,7 +97,7 @@ class Visitor extends KotlinParserBaseVisitor[ASTNode] {
   override def visitDisjunction(ctx: KotlinParser.DisjunctionContext): KtDisjunction =
     new KtDisjunction {
       context = ctx
-      conjunctions = ctx.conjunction.map { conjunctionContext =>
+      conjunctions = ctx.conjunction.asScala.map { conjunctionContext =>
         val conjunction = visitConjunction(conjunctionContext)
         conjunction.parent = this
         conjunction
@@ -107,7 +107,7 @@ class Visitor extends KotlinParserBaseVisitor[ASTNode] {
   override def visitConjunction(ctx: KotlinParser.ConjunctionContext): KtConjunction =
     new KtConjunction {
       context = ctx
-      equalities = ctx.equality.map { item =>
+      equalities = ctx.equality.asScala.map { item =>
         val equality = visitEquality(item)
         equality.parent = this
         equality
